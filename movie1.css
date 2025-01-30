@@ -1,0 +1,57 @@
+nav {
+  background-color: #111;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.social {
+  display: flex;
+}
+
+.social a {
+  margin-left: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.social i { /* Font Awesome icons */
+  font-size: 18px;
+}
+
+/*Optional:  Responsive design for smaller screens*/
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column; /* Stack links vertically */
+  }
+  .nav-links li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .social {
+    margin-top: 10px; /* Move social icons below links */
+  }
+}
