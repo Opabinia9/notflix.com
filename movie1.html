@@ -1,25 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>The X-files</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="movie1.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/x-icon" href="imgs\Notflix Logo 7.png">
+    <meta charset="UTF-8">
+    <meta name="descrpittion" content="move1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="navbar.css">
+    <link rel="stylesheet" type="text/css" href="general.css">
+    <script src="navbar.js"></script>
   </head>
   <body>
     <header>
       <nav>
-        <div class="logo">Logo</div>
-        <ul class="nav-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Watch</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-        <div class="social">
-          <a href="#"><i class="fab fa-youtube"></i></a>
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-        </div>
+          <button class="hamburger" onclick="toggleMenu()">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+          </button>
+          <button class="home-button"><a href="index.html"><img src="imgs\Notflix Logo 6.png" alt="Home"></img></a></button>
+          <div class="search-container">
+              <input type="text" placeholder="Search...">
+              <button type="submit">Search</button>
+          </div>
+          <button class="watchlist-button">Watchlist</button>
+          <button class="account-button">Account</button>
+          <div id="dropdown" class="dropdown-content">
+              <a href="#link1">Link 1</a>
+              <a href="#link2">Link 2</a>
+              <a href="#link3">Link 3</a>
+          </div>
       </nav>
+    </header>
+    <body>
+      <video poster="imgs/thexfiles.jpg" src="C:\Users\sebas\OneDrive - Federation University Australia\Cyber\CodeFiles\HomeNetFiles\Videos\Heavenly Headquarters Year 2024_ Part IV.mp4" controls>Sad Face :(</video>
+      <br/>
+      <br/>
+      <hr/>
+      <br/>
+      <br/>
+      <h2 class="blueback">The X-Files</h2>
+      <h6 class="blueback">hd</h6>
+      <h6 class="blueback">rating</h6>
+      <h6 class="blueback">duration</h6>
+      <p class="blueback">description</p>
+    </body>
+    <footer>
+    </footer>
     </body>
     </html>

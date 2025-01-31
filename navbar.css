@@ -1,8 +1,6 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
 }
-
 nav {
     background-color: #333;
     color: #fff;
@@ -38,6 +36,14 @@ nav {
     padding: 10px 15px;
     margin-left: 20px;
     cursor: pointer;
+}
+.home-button{
+    padding: 0px;
+    display: flex;
+    align-items:center;
+}
+.home-button img{
+  height:40px;
 }
 
 .search-container {

@@ -1,16 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <title>Notflix.com</title>
+    <link rel="icon" type="image/x-icon" href="imgs\Notflix Logo 7.png">
     <meta charset="UTF-8">
     <meta name="descrpittion" content="netflix but not">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notflix.com</title>
+    <link rel="stylesheet" type="text/css" href="navbar.css">
+    <script src="navbar.js"></script>
   </head>
-    <body>
-      <header>
-        <nav>
-        </nav>
-      </header>
+  <body>
+    <header>
+      <nav>
+          <button class="hamburger" onclick="toggleMenu()">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+          </button>
+          <button class="home-button"><a href="index.html"><img src="imgs\Notflix Logo 6.png" alt="Home"></img></a></button>
+          <div class="search-container">
+              <input type="text" placeholder="Search...">
+              <button type="submit">Search</button>
+          </div>
+          <button class="watchlist-button">Watchlist</button>
+          <button class="account-button">Account</button>
+          <div id="dropdown" class="dropdown-content">
+              <a href="#link1">Link 1</a>
+              <a href="#link2">Link 2</a>
+              <a href="#link3">Link 3</a>
+          </div>
+      </nav>
+    </header>
       <main>
         <h1 style="color:red; text-align:center;">
           Notflix
