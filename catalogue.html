@@ -1,45 +1,114 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Movie List</title>
+    <title>catalogue</title>
+    <link rel="icon" type="image/x-icon" href="imgs\Notflix Logo 7.png">
+    <link rel="stylesheet" type="text/css" href="navbar.css">
+    <link rel="stylesheet" type="text/css" href="general.css">
+    <link rel="stylesheet" type="text/css" href="footer.css">
+    <script src="navbar.js"></script>
+    <meta charset="UTF-8">
+    <meta name="descrpittion" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-    <ol type="i" style="float:left; border:10px solid black">
-      <li style="display:inline"><a href="#">the great escape</a></li>
-      <li style="display:inline">the x files
-        <ol>
-          <li>Season 1 Episode 1</li>
-        </ol>
-      </li>
-      <li>batman</li>
-    </ol>
-<br/>
-
-<table>
-<thead>
-  <caption>movies</caption>
-  <tr>
-    <th>name</th>
-    <th>seasons</th>
-    <th>rating</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td colspan="2">arrow</td>
-    <td>9</td>
-    <td>9.5</td>
-  </tr>
-</tbody>
-</table>
-<br/><br/><hr/>
-<ul style="background-color:lightblue;">
-  <li style="display:inline">home</li>
-  <li style="display:inline">about</li>
-  <li style="display:inline">contact</li>
-</ul>
-
-
-
+    <header>
+      <nav>
+          <button class="hamburger" onclick="toggleMenu()">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+          </button>
+          <button class="home-button"><a href="index.html"><img src="imgs\Notflix Logo 6.png" alt="Home"></img></a></button>
+          <div class="search-container">
+              <input type="text" placeholder="Search...">
+              <button type="submit">Search</button>
+          </div>
+          <button class="watchlist-button">Watchlist</button>
+          <button class="account-button"><a href="accountcreation.html">Account</button>
+          <div id="dropdown" class="dropdown-content">
+              <a href="#link1">Link 1</a>
+              <a href="#link2">Link 2</a>
+              <a href="#link3">Link 3</a>
+          </div>
+      </nav>
+    </header>
+    <main>
+      <div class=""></div>
+      <div class="catouterdiv">
+        <div class="catselect">
+          <button type="button" class="cattop">Top</button>
+          <button type="button" class="catnew">New</button>
+          <button type="button" class="">?</button>
+          <button type="button" class="catall">All</button>
+        </div>
+        <div class="catmovies">
+          <div class="catmovie">
+            <div class="catposter"><img src="imgs/xfiles.jpg"></img></div>
+            <div class="catdeat">
+              <div class="catname">The X-Files</div>
+              <div class="catyear">1993</div>
+            </div>
+          </div>
+          <div class="catmovie">
+            <div class="catposter"><img src="imgs/folder.jpg"></img></div>
+            <div class="catdeat">
+              <div class="catname">Dead air</div>
+              <div class="catyear">2024</div>
+            </div>
+          </div>
+          <div class="catmovie">
+            <div class="catposter"><img src="imgs/thexfiles.jpg"></img></div>
+            <div class="catdeat">
+              <div class="catname">The X-Files</div>
+              <div class="catyear">1993</div>
+            </div>
+          </div>
+          <div class="catmovie">
+            <div class="catposter"><img src="imgs/thexfiles.jpg"></img></div>
+            <div class="catdeat">
+              <div class="catname">The X-Files</div>
+              <div class="catyear">1993</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer">
+        <div class="linktb">
+          <div class="linklisttitle">
+              links
+          </div>
+        <div class="linklists">
+            <div class="linklist">
+              <ul>
+                <li>link 1</li>
+                <li>link 2</li>
+                <li>link 3</li>
+              </ul>
+            </div>
+            <div class="linklist">
+              <ul>
+                <li>link 4</li>
+                <li>link 5</li>
+                <li>link 6</li>
+              </ul>
+            </div>
+            <div class="linklist">
+              <ul>
+                <li>link 7</li>
+                <li>link 8</li>
+                <li>link 9</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="aboutsec">
+          <h3>about me</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer facilisis, risus hendrerit rhoncus viverra, leo enim maximus tellus, vitae tincidunt nunc odio a felis. Suspendisse ornare diam vitae nisi dignissim ullamcorper. Praesent fermentum accumsan auctor. Maecenas placerat purus metus. Cras nibh elit, pharetra id blandit vitae, viverra ultrices magna. Etiam diam mauris, fermentum nec rutrum quis, faucibus quis nisl. Quisque at sapien mauris.</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

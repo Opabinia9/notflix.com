@@ -1,0 +1,53 @@
+.footer{
+  flex-shrink: 0;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  position: relative;
+  margin-top: auto;
+}
+.linktb{
+  xborder: 5px solid black;
+  height: auto;
+  width: 500px;
+}
+.linklisttitle{
+  xborder: 5px solid green;
+  padding-left: 65px;
+}
+.linklists{
+  xborder: 5px solid green;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.linklist{
+  xborder: 5px solid magenta;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+
+}
+ul{
+  xborder: 5px solid blue;
+  list-style-type: none;
+  margin: 0px;
+  padding: 5px;
+}
+li{
+  text-align: center;
+  margin: 5px;
+  xborder: 2px solid lime;
+}
+
+.aboutsec{
+  height: auto;
+  width: 610px;
+  padding: 0px 0px 0px 0px
+}
