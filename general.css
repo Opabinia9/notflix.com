@@ -147,3 +147,110 @@ header {
 main {
   flex: 1 0 auto;
 }
+
+/*account page stylesheet*/
+.acountcb{
+  background-color: grey;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+.acountcreate{
+  background-color: white;
+  height: 100%;
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.acountctitle{
+  xborder: 5px solid black;
+  color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+  font-size: 20px;
+  font-family: arial;
+  padding: 10px;
+}
+.acountcemail{
+  xborder: 5px solid black;
+  font-family: arial;
+  padding: 10px;
+}
+.acountcemail > input{
+  border: 1px solid grey;
+  border-radius: 5px;
+  width: 98%;
+}
+.acountcusername{
+  xborder: 5px solid black;
+  font-family: arial;
+  padding: 10px;
+}
+.acountcusername > input{
+  border: 1px solid grey;
+  border-radius: 5px;
+  width: 98%;
+}
+.acountcpassword{
+  xborder: 5px solid black;
+  font-family: arial;
+  padding: 10px;
+}
+.acountcpassword > input{
+  border: 1px solid grey;
+  border-radius: 5px;
+  width: 98%;
+}
+.acountcconfim{
+  xborder: 5px solid black;
+  font-family: arial;
+  padding: 10px;
+}
+.acountcconfim > input{
+  border: 1px solid grey;
+  border-radius: 5px;
+  width: 98%;
+}
+.acountcsubscribe{
+  xborder: 5px solid black;
+  font-family: arial;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.acountcsubscribe > input{
+}
+.acountcsubmit{
+  xborder: 5px solid black;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+.acountcsubmit > input{
+  border: none;
+  border-radius: 5px;
+  background-color: #04AA6D; /* Green */
+  color: white;
+  padding: 15px 100px;
+  width: 98%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
+.acountctext{
+  xborder: 5px solid black;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.acountctext > hr{
+  border: 1px solid grey;
+  border-radius: 50px;
+  width: 99%;
+}
