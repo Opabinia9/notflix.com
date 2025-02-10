@@ -4,7 +4,7 @@ Title varchar(50),
 ReleaseYear int,
 Length varchar(7),
 NOS int default 0 CHECK (NOS >= 0),
-Available boolean default = FALSE
+Available boolean default FALSE
 );
 create table Season (
 SeriesID int,
