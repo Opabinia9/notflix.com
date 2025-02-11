@@ -18,7 +18,7 @@
     <main>
       <?php
       echo ('
-        <video poster="imgs/thexfiles.jpg" src="videos\examplemovie.mp4" controls>Sad Face :(</video>
+        <video poster="imgs/thexfiles.jpg" src="videos/examplemovie.mp4" controls>Sad Face :(</video>
         <br/>
         <br/>
         <br/>
