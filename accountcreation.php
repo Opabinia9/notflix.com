@@ -16,6 +16,7 @@
      </nav>
     </header>
     <main class="acountcb">
+      <!-- <?php // TODO: fix item so centered and min heigth ?> -->
       <form class="acountcreate" action="">
         <div class="acountctitle">Create you account</div>
         <div class="acountcemail">Email<br/><input type="email"/></div>
