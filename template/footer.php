@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="css/footer.css">
+<link rel="stylesheet" type="text/css" href="http://notflix.com/css/footer.css">
 <div class="footer">
   <div class="linktb">
     <div class="linklisttitle">

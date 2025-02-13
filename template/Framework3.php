@@ -1,17 +1,17 @@
 <html lang="en">
   <head>
     <title></title>
-    <link rel="icon" type="image/x-icon" href="imgs\Notflix Logo 7.png">
+    <link rel="icon" type="image/x-icon" href="http://notflix.com/imgs/notflixico.png">
     <meta charset="UTF-8">
     <meta name="descrpittion" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/general.css">
+    <link rel="stylesheet" type="text/css" href="http://notflix.com/css/general.css">
   </head>
   <body>
     <header>
       <nav>
       <?php
-        include 'navbar.php';
+        include($_SERVER["DOCUMENT_ROOT"] . "/navbar.php");
        ?>
      </nav>
     </header>
@@ -19,7 +19,7 @@
     </main>
     <footer>
       <?php
-      include 'footer.php';
+        include($_SERVER["DOCUMENT_ROOT"] . "/footer.php");
        ?>
     </footer>
   </body>

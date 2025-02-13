@@ -43,7 +43,7 @@ CREATE TABLE `episode` (
 
 LOCK TABLES `episode` WRITE;
 /*!40000 ALTER TABLE `episode` DISABLE KEYS */;
-INSERT INTO `episode` VALUES (100,0,1,'Mr. Nanny','1h 24m',1,'C:\\Users\\sebas\\OneDrive - Federation University Australia\\Cyber\\CodeFiles\\HomeNetFiles\\Notflix.com\\videos\\Heavenly Headquarters Year 2024_ Part IV.mp4');
+INSERT INTO `episode` VALUES (001,0,1,'testmovie','1h 24m',1,'C:\\Users\\sebas\\OneDrive - Federation University Australia\\Cyber\\CodeFiles\\HomeNetFiles\\Notflix.com\\videos\\Heavenly Headquarters Year 2024_ Part IV.mp4');
 /*!40000 ALTER TABLE `episode` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -72,7 +72,7 @@ CREATE TABLE `media` (
 
 LOCK TABLES `media` WRITE;
 /*!40000 ALTER TABLE `media` DISABLE KEYS */;
-INSERT INTO `media` VALUES (100,'Mr. Nanny',1993,'1h 24m',0,1);
+INSERT INTO `media` VALUES (001,'testmovie','this is a test',1993,'1h 24m',0,1);
 /*!40000 ALTER TABLE `media` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -99,7 +99,7 @@ CREATE TABLE `season` (
 
 LOCK TABLES `season` WRITE;
 /*!40000 ALTER TABLE `season` DISABLE KEYS */;
-INSERT INTO `season` VALUES (100,0,1);
+INSERT INTO `season` VALUES (001,0,1);
 /*!40000 ALTER TABLE `season` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

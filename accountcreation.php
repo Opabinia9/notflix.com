@@ -1,9 +1,9 @@
 <html lang="en">
   <head>
     <title>account</title>
-    <link rel="icon" type="image/x-icon" href="imgs\Notflix Logo 7.png">
+    <link rel="icon" type="image/x-icon" href="imgs\notflixico.png">
     <meta charset="UTF-8">
-    <meta name="descrpittion" content="">
+    <meta name="descrpittion" content="Create Acount">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/general.css">
   </head>

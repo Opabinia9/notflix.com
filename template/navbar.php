@@ -1,12 +1,12 @@
 <html>
-  <link rel="stylesheet" type="text/css" href="css/navbar.css">
-  <script src="js/navbar.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://notflix.com/css/navbar.css">
+  <script src="http://notflix.com/js/navbar.js"></script>
   <button class="hamburger" onclick="toggleMenu()">
       <div class="line"></div>
       <div class="line"></div>
       <div class="line"></div>
   </button>
-  <button class="home-button"><a href="index.php"><img src="imgs\Notflix Logo 6.png" alt="Home"></img></a></button>
+  <button class="home-button"><a href="http://notflix.com/index.php"><img src="http://notflix.com/imgs/notflixnav.png" alt="Home"></img></a></button>
   <div class="search-container">
       <input type="text" placeholder="Search...">
       <button type="submit">Search</button>
