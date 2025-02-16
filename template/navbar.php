@@ -7,10 +7,11 @@
       <div class="line"></div>
   </button>
   <button class="home-button"><a href="http://notflix.com/index.php"><img src="http://notflix.com/imgs/notflixnav.png" alt="Home"></img></a></button>
-  <div class="search-container">
-      <input type="text" placeholder="Search...">
-      <button type="submit">Search</button>
-  </div>
+<form method="POST" action="http://notflix.com/search.php" id="fitlers" class="search-container">
+    <input type="text" placeholder="Search..." name="searchTerm">
+    <button type="submit">Search</button>
+</form>
+
   <button class="watchlist-button">Watchlist</button>
   <button class="account-button"><a href="accountcreation.php">Account</button>
   <div id="dropdown" class="dropdown-content">

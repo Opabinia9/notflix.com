@@ -17,7 +17,7 @@
     </header>
     <main>
       <?php
-      // // TODO: ADD SEARCH SYSTEM, MAKE SEARCH BAR FUNCTIOAL, SERIES PAGE, ADD ACCOUNTS, comment section
+      // TODO:SERIES PAGE, ADD ACCOUNTS, comment section, custom video player, 404 page, drop .php
        ?>
       <h1 style="color:red; text-align:center;">
         Notflix
@@ -31,9 +31,9 @@
         <section style="text-align: center; font-family: Courier;">to the middle of nowhere near you</section>
         <br/>
         <section style="text-align: center;">
-          <a href="http://notflix.com/movielist1.php">explore</a>
+          <a href="http://notflix.com/search.php">explore</a>
           <a href="http://notflix.com/accountcreation.php">create acount</a>
-          <a href="http://notflix.com/movies/001.php">movie</a>
+          <a href="http://notflix.com/movie/001.php">movie</a>
         </section>
       </article>
       <br/>
