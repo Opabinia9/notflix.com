@@ -5,7 +5,7 @@ echo '
 if($EpisodeID == $selectedep){echo "checked";};
 echo '
 required onchange="this.form.submit()">
-<div class="eplable">Ep '.$EpisodeID.': '.$title.'</div>
+<div class="eplable">Ep '.$EpisodeID.': '.$eptitle.'</div>
 </label>
 ';
  ?>

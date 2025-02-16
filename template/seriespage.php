@@ -102,7 +102,7 @@ $sql = "SELECT * FROM Episode WHERE SeriesID = $SeriesID AND SeasonID = $selecte
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
 while($row = $result->fetch_assoc()) {
-$title = $row["EpisodeTitle"];
+$eptitle = $row["EpisodeTitle"];
 $EpisodeID = $row["EpisodeID"];
 include($_SERVER["DOCUMENT_ROOT"] . "/template/episode.php");
 }
