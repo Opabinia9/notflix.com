@@ -31,7 +31,7 @@ if (isset($_SESSION["user_id"])) {
   } else {echo "0 results";}
 
   if(isset($_SESSION["user_id"])){
-    $sql = "SELECT * FROM Watchlist WHERE AccountID = {$_SESSION["user_id"]} AND SeriesID = $SeriesID AND SeasonID = $SeasonID AND EpisodeID = $EpisodeID";
+    $sql = "SELECT * FROM Watchlist WHERE AccountID = {$_SESSION["user_id"]} AND SeriesID = $SeriesID";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
       while($row = $result->fetch_assoc()) {
