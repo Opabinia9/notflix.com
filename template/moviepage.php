@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php
   include($_SERVER["DOCUMENT_ROOT"] . "/template/moviedbq.php");
  ?>
@@ -22,7 +23,16 @@
     <main>
       <?php
       echo ('
-        <video poster='.$poster.' src='.$URL.' controls>Sad Face :(</video>
+        <video poster='.$poster.' src='.$URL.' id="videoPlayer" controls>Sad Face :(</video>') ?>
+        <script>
+        const videoPlayer = document.getElementById("videoPlayer");
+        videoPlayer.currentTime = convertTimeToSeconds("<?php echo "$playbackPosition"; ?>");
+        function convertTimeToSeconds(time) {
+        const parts = time.split(':');
+        return parseInt(parts[0]) * 3600 + parseInt(parts[1]) * 60 + parseInt(parts[2]);
+        }
+        </script>
+        <?php  echo ('
         <br/>
         <br/>
         <br/>

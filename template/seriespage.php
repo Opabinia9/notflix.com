@@ -1,15 +1,26 @@
+<!DOCTYPE html>
 <?php
-if(isset($_POST['season'])){
-$selected = htmlspecialchars($_POST['season']);
-} else {
-$selected = 1;
+session_start();
+if (isset($_SESSION["user_id"])) {
+    include($_SERVER["DOCUMENT_ROOT"] . "/template/dbconnect.php");
+    $sql = "SELECT * FROM users
+            WHERE AccountID = {$_SESSION["user_id"]}";
+    $result = $conn->query($sql);
+    $user = $result->fetch_assoc();
 }
+
+  if(isset($_POST['season'])){
+    $selected = htmlspecialchars($_POST['season']);
+  } else {
+    $selected = 1;
+  }
 $SeasonID = $selected;
 if(isset($_POST['selectedepisode'])){
 $selectedep = htmlspecialchars($_POST['selectedepisode']);
 } else {
 $selectedep = 1;
 }
+
 $EpisodeID = $selectedep;
 include($_SERVER["DOCUMENT_ROOT"] . "/template/dbconnect.php");
 $sql = "SELECT * FROM Media WHERE SeriesID = $SeriesID";
@@ -23,6 +34,7 @@ $length = $row["Length"];
 $poster = $row["Poster"];
 }
 } else {echo "0 results";}
+
 $sql = "SELECT * FROM Episode WHERE SeriesID = $SeriesID AND SeasonID = $SeasonID AND EpisodeID = $EpisodeID";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
@@ -31,6 +43,17 @@ $available = $row["Available"];
 $URL = $row["URL"];
 }
 } else {echo "0 results";}
+
+if(isset($_SESSION["user_id"])){
+  $sql = "SELECT * FROM Watchlist WHERE AccountID = {$_SESSION["user_id"]} AND SeriesID = $SeriesID AND SeasonID = $SeasonID AND EpisodeID = $EpisodeID";
+  $result = $conn->query($sql);
+  if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+      $playbackPosition = $row["Time_code"];
+    }
+  } else { $playbackPosition =  "0:0:0";}
+} else { $playbackPosition =  "0:0:0";}
+
 $conn->close();
 ?>
 <html lang="en" class="moviepage">
@@ -55,7 +78,16 @@ include($_SERVER["DOCUMENT_ROOT"] . "/template/navbar.php");
 <main>
 <?php
 echo ('
-<video poster='.$poster.' src="'.$URL.'" controls>Sad Face :(</video>
+<video poster='.$poster.' src="'.$URL.'" id="videoPlayer" controls>Sad Face :(</video> ')?>
+<script>
+const videoPlayer = document.getElementById("videoPlayer");
+videoPlayer.currentTime = convertTimeToSeconds("<?php echo "$playbackPosition"; ?>");
+function convertTimeToSeconds(time) {
+const parts = time.split(':');
+return parseInt(parts[0]) * 3600 + parseInt(parts[1]) * 60 + parseInt(parts[2]);
+}
+</script>
+<?php echo ('
 <br/>
 <br/>
 <br/>
@@ -104,13 +136,20 @@ if ($result->num_rows > 0) {
 while($row = $result->fetch_assoc()) {
 $eptitle = $row["EpisodeTitle"];
 $EpisodeID = $row["EpisodeID"];
-include($_SERVER["DOCUMENT_ROOT"] . "/template/episode.php");
+echo '
+<label class="episode">
+<input type="radio" name="selectedepisode" value="'.$EpisodeID.'"';
+if($EpisodeID == $selectedep){echo "checked";};
+echo '
+required onchange="this.form.submit()">
+<div class="eplable">Ep '.$EpisodeID.': '.$eptitle.'</div>
+</label>
+';
 }
 } else {echo "0 results";}
 $conn->close();
 echo ('
 </form>
-<!-- </div> -->
 </div>
 </div>
 <br/>
@@ -134,11 +173,6 @@ echo ('
 ');
 ?>
 </main>
-
-
-
-
-
 <footer>
 <?php
 include($_SERVER["DOCUMENT_ROOT"] . "/template/footer.php");
