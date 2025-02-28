@@ -1,28 +1,51 @@
 <!DOCTYPE html>
 <?php
 session_start();
-if (isset($_SESSION["user_id"])) {
-    include($_SERVER["DOCUMENT_ROOT"] . "/template/dbconnect.php");
-    $sql = "SELECT * FROM users
-            WHERE AccountID = {$_SESSION["user_id"]}";
-    $result = $conn->query($sql);
-    $user = $result->fetch_assoc();
-}
-
+include($_SERVER["DOCUMENT_ROOT"] . "/template/dbconnect.php");
+if(isset($_SESSION["user_id"])){
+  $sql = "SELECT * FROM Watchlist WHERE AccountID = {$_SESSION["user_id"]} AND SeriesID = $SeriesID";
+  $result = $conn->query($sql);
+  if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+      $SeasonID = $row["SeasonID"];
+      $EpisodeID = $row["EpisodeID"];
+      $playbackPosition = $row["Time_code"];
+      $selected = $SeasonID;
+      $selectedep = $EpisodeID;
+    }
+  } else {
+    $playbackPosition =  "0:0:0";
+    if(isset($_POST['season'])){
+      $selected = htmlspecialchars($_POST['season']);
+    } else {
+      $selected = 1;
+    }
+    $SeasonID = $selected;
+    if(isset($_POST['selectedepisode'])){
+      $selectedep = htmlspecialchars($_POST['selectedepisode']);
+      $EpisodeID = $selectedep;
+    } else {
+      $selectedep = 1;
+      $EpisodeID = $selectedep;
+    }
+  }
+} else {
+  $playbackPosition =  "0:0:0";
   if(isset($_POST['season'])){
     $selected = htmlspecialchars($_POST['season']);
   } else {
     $selected = 1;
   }
-$SeasonID = $selected;
-if(isset($_POST['selectedepisode'])){
-$selectedep = htmlspecialchars($_POST['selectedepisode']);
-} else {
-$selectedep = 1;
+  $SeasonID = $selected;
+  if(isset($_POST['selectedepisode'])){
+    $selectedep = htmlspecialchars($_POST['selectedepisode']);
+    $EpisodeID = $selectedep;
+  } else {
+    $selectedep = 1;
+    $EpisodeID = $selectedep;
+  }
 }
 
-$EpisodeID = $selectedep;
-include($_SERVER["DOCUMENT_ROOT"] . "/template/dbconnect.php");
 $sql = "SELECT * FROM Media WHERE SeriesID = $SeriesID";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
@@ -44,15 +67,7 @@ $URL = $row["URL"];
 }
 } else {echo "0 results";}
 
-if(isset($_SESSION["user_id"])){
-  $sql = "SELECT * FROM Watchlist WHERE AccountID = {$_SESSION["user_id"]} AND SeriesID = $SeriesID AND SeasonID = $SeasonID AND EpisodeID = $EpisodeID";
-  $result = $conn->query($sql);
-  if ($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
-      $playbackPosition = $row["Time_code"];
-    }
-  } else { $playbackPosition =  "0:0:0";}
-} else { $playbackPosition =  "0:0:0";}
+
 
 $conn->close();
 ?>
