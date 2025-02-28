@@ -13,7 +13,7 @@
 </form>
 
   <button class="watchlist-button">Watchlist</button>
-  <button class="account-button"><a href="accountcreation.php">Account</button>
+  <button class="account-button"><a href="http://notflix.com/accounts/account.php">Account</button>
   <div id="dropdown" class="dropdown-content">
       <a href="#link1">Link 1</a>
       <a href="#link2">Link 2</a>
