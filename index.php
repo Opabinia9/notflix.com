@@ -1,3 +1,13 @@
+<?php
+session_start();
+if (isset($_SESSION["user_id"])) {
+    include($_SERVER["DOCUMENT_ROOT"] . "/template/dbconnect.php");
+    $sql = "SELECT * FROM users
+            WHERE AccountID = {$_SESSION["user_id"]}";
+    $result = $conn->query($sql);
+    $user = $result->fetch_assoc();
+}
+?>
 <html lang="en">
   <head>
     <title>Notflix.com</title>
@@ -17,7 +27,7 @@
     </header>
     <main>
       <?php
-      // TODO:SERIES PAGE, ADD ACCOUNTS, comment section, custom video player, 404 page, drop .php
+      // TODO:comment section, vido time remember, 404 page, drop .php
        ?>
       <h1 style="color:red; text-align:center;">
         Notflix
@@ -31,9 +41,12 @@
         <section style="text-align: center; font-family: Courier;">to the middle of nowhere near you</section>
         <br/>
         <section style="text-align: center;">
-          <a href="http://notflix.com/search.php">explore</a>
-          <a href="http://notflix.com/accountcreation.php">create acount</a>
-          <a href="http://notflix.com/movie/001.php">movie</a>
+          <?php if (isset($user)): ?>
+              <p>Hello <?= htmlspecialchars($user["Username"]) ?></p>
+              <p><a href="http://notflix.com/accounts/logout.php">Log out</a></p>
+          <?php else: ?>
+              <p><a href="http://notflix.com/accounts/login.php">Log in</a> or <a href="http://notflix.com/accounts/signup.html">sign up</a></p>
+          <?php endif; ?>
         </section>
       </article>
       <br/>

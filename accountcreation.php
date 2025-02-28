@@ -6,12 +6,13 @@
     <meta name="descrpittion" content="Create Acount">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/general.css">
+    <link rel="stylesheet" type="text/css" href="css/accountcreation.css">
   </head>
   <body>
     <header>
       <nav>
       <?php
-        include 'navbar.php';
+        include($_SERVER["DOCUMENT_ROOT"] . "/template/navbar.php");
        ?>
      </nav>
     </header>
@@ -19,18 +20,15 @@
       <!-- <?php // TODO: fix item so centered and min heigth ?> -->
       <form class="acountcreate" action="">
         <div class="acountctitle">Create you account</div>
-        <div class="acountcemail">Email<br/><input type="email"/></div>
         <div class="acountcusername">Username<br/><input type="username"/></div>
         <div class="acountcpassword">Password<br/><input type="password"/></div>
         <div class="acountcconfim">Confirm password<br/><input type="password"/></div>
-        <div class="acountcsubscribe"><input type="checkbox"/>Subscribe</div>
         <div class="acountcsubmit"><input type="submit" value="Submit"></div>
-        <div class="acountctext"><hr/>By creating an acount, you agree to our Terms of service and privacy policy</div>
       </form>
     </main>
     <footer>
       <?php
-      include 'footer.php';
+      include($_SERVER["DOCUMENT_ROOT"] . "/template/footer.php");
        ?>
     </footer>
   </body>
