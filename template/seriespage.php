@@ -1,9 +1,30 @@
 <!DOCTYPE html>
+<!--htmlspecialchars($_POST['season']), htmlspecialchars($_POST['selectedepisode']),$_SESSION["user_id"], $SeriesID-->
 <?php
-  session_start();
-  include($_SERVER["DOCUMENT_ROOT"] . "/template/dbconnect.php");
-  if(isset($_SESSION["user_id"])){
-    $userid = $_SESSION["user_id"];
+session_start();
+include($_SERVER["DOCUMENT_ROOT"] . "/template/dbconnect.php");
+if(isset($_SESSION["user_id"])){
+  $userid = $_SESSION["user_id"];
+  if(isset($_POST['season'])){
+    $sql = "UPDATE Watchlist SET SeasonID = ? WHERE AccountID = ? AND SeriesID = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("sss",$_POST['season'], $userid, $SeriesID);
+    if ($stmt->execute()) {
+    } else {
+        echo "Error: " . $stmt->error;
+    }
+    $stmt->close();
+  }
+  if(isset($_POST['selectedepisode'])){
+    $sql = "UPDATE Watchlist SET EpisodeID = ?, Time_code = '0:0:0' WHERE AccountID = ? AND SeriesID = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("sss", $_POST['selectedepisode'], $userid, $SeriesID);
+    if ($stmt->execute()) {
+    } else {
+        echo "Error: " . $stmt->error;
+    }
+    $stmt->close();
+  }
     $sql = "SELECT * FROM Watchlist WHERE AccountID = {$_SESSION["user_id"]} AND SeriesID = $SeriesID";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {

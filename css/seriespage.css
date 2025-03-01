@@ -1,4 +1,8 @@
 /*move page style*/
+.playreset {
+  display:none;
+  visibility:hidden;
+}
 .moviepage{
   xbackground-color: rgb(0,0,30);
   xbackground-color: #0f1622;
