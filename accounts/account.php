@@ -39,7 +39,7 @@ if (isset($_SESSION["user_id"])) {
         <div class="nologout">
           <div class="nologin">
             <h1>Sorry, You need to login first</h1>
-            <p><a href="http://notflix.com/accounts/login.php">Log in</a> or <a href="http://notflix.com/accounts/signup.html">sign up</a></p>
+            <p><a href="http://notflix.com/accounts/login.php">Log in</a> or <a href="http://notflix.com/accounts/signup.php">sign up</a></p>
           </div>
         </div>
       <?php endif; ?>

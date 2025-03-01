@@ -45,7 +45,7 @@ if (isset($_SESSION["user_id"])) {
               <p>Hello <?= htmlspecialchars($user["Username"]) ?></p>
               <p><a href="http://notflix.com/accounts/logout.php">Log out</a></p>
           <?php else: ?>
-              <p><a href="http://notflix.com/accounts/login.php">Log in</a> or <a href="http://notflix.com/accounts/signup.html">sign up</a></p>
+              <p><a href="http://notflix.com/accounts/login.php">Log in</a> or <a href="http://notflix.com/accounts/signup.php">sign up</a></p>
           <?php endif; ?>
         </section>
       </article>

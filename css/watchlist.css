@@ -1,6 +1,21 @@
 body{
-  border: 5px solid black;
   margin: 0px;
+  background-color: #0f1622;
+}
+.nologout{
+  padding: 230px 0px 230px 0px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nologin{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
 /*catalogue*/
 .catouterdiv{
@@ -14,7 +29,7 @@ body{
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-space-between;
+    justify-content: space-between;
     margin: 0 20px;
     padding: 5px
 }
