@@ -1,0 +1,48 @@
+.nologout{
+  padding: 230px 0px 230px 0px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nologin{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.outdiv{
+  xbackground-color: red;
+  padding: 100px 0px;
+  display: flex;
+  justify-content: center;
+}
+.indiv{
+  background-color: grey;
+  box-shadow: 5px 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.textbox{
+  border: 5px solid black;
+  border-radius: 5px;
+  margin: 10px;
+  width: 500px;
+  height: 100px;
+  resize: none;
+}
+.textbutton{
+  margin: 10px;
+  width: 100px;
+  height: 50px;
+}
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: courier;
+}

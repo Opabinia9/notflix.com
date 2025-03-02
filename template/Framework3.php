@@ -11,7 +11,7 @@
     <header>
       <nav>
       <?php
-        include($_SERVER["DOCUMENT_ROOT"] . "/navbar.php");
+        include($_SERVER["DOCUMENT_ROOT"] . "/template/navbar.php");
        ?>
      </nav>
     </header>
@@ -19,7 +19,7 @@
     </main>
     <footer>
       <?php
-        include($_SERVER["DOCUMENT_ROOT"] . "/footer.php");
+        include($_SERVER["DOCUMENT_ROOT"] . "/template/footer.php");
        ?>
     </footer>
   </body>
