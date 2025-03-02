@@ -12,11 +12,11 @@
     <button type="submit">Search</button>
 </form>
 
-  <button class="watchlist-button"><a href="http://notflix.com/accounts/watchlist.php">Watchlist</button>
-  <button class="account-button"><a href="http://notflix.com/accounts/account.php">Account</button>
+<button class="watchlist-button" onclick="window.location.href='http://notflix.com/accounts/watchlist.php';">Watchlist</button>
+<button class="account-button" onclick="window.location.href='http://notflix.com/accounts/account.php';">Account</button>
   <div id="dropdown" class="dropdown-content">
-      <a href="#link1">Link 1</a>
-      <a href="#link2">Link 2</a>
-      <a href="#link3">Link 3</a>
+      <a href="#link1">Request</a>
+      <a href="#link2">Report</a>
+      <a href="#link3">Message</a>
   </div>
 </html>

@@ -81,11 +81,13 @@ nav {
 
 /* Dropdown styles */
 .dropdown-content {
-    display: none; /* Hidden by default */
-    position: absolute; /* Position it below the nav */
-    background-color: #333; /* Dropdown background */
-    min-width: 160px; /* Set a minimum width */
-    z-index: 1; /* Ensure it appears above other content */
+  display: none;
+  position: absolute;
+  top: 100%; /* Position it below the nav */
+  left: 0;   /* Align it to the left */
+  background-color: #333;
+  min-width: 160px;
+  z-index: 1;
 }
 
 .dropdown-content a {

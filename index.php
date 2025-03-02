@@ -27,7 +27,7 @@ if (isset($_SESSION["user_id"])) {
     </header>
     <main>
       <?php
-      // TODO:comment section, vido time remember, 404 page, drop .php, check fro htmlspecialchars
+      // TODO:404 page, drop .php, check for htmlspecialchars, request, report, message
        ?>
       <h1 style="color:red; text-align:center;">
         Notflix
