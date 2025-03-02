@@ -27,7 +27,7 @@ if (isset($_SESSION["user_id"])) {
     </header>
     <main>
       <?php
-      // TODO:404 page, drop .php, check for htmlspecialchars
+      // TODO:404 page, drop .php
        ?>
       <h1 style="color:red; text-align:center;">
         Notflix
@@ -36,9 +36,9 @@ if (isset($_SESSION["user_id"])) {
       <p style="text-align: center; font-family: courier;">Welcome to notflix an offline streaming service just for us</p>
       <article>
         <section style="color:red; text-align: center;">
-          <h2><b>Coming soon</b></h2>
+          <h2><b>Pre-Debut</b></h2>
         </section>
-        <section style="text-align: center; font-family: Courier;">to the middle of nowhere near you</section>
+        <section style="text-align: center; font-family: Courier;">Up Tonight</section>
         <br/>
         <section style="text-align: center;">
           <?php if (isset($user)): ?>

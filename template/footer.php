@@ -7,29 +7,29 @@
   <div class="linklists">
       <div class="linklist">
         <ul>
-          <li>link 1</li>
-          <li>link 2</li>
-          <li>link 3</li>
+          <li><a href="http://notflix.com/template/bugrep.php">Report a bug</a></li>
+          <li><a href="http://notflix.com/template/request.php">Request a show</a></li>
+          <li><a href="http://notflix.com/template/feature.php">Request a feature</a></li>
         </ul>
       </div>
       <div class="linklist">
         <ul>
-          <li>link 4</li>
-          <li>link 5</li>
-          <li>link 6</li>
+          <li><a href="http://notflix.com/accounts/signup.php">Create account</a></li>
+          <li><a href="http://notflix.com/accounts/login.php">Login</a></li>
+          <li><a href="http://notflix.com/accounts/logout.php">Logout</a></li>
         </ul>
       </div>
       <div class="linklist">
         <ul>
-          <li>link 7</li>
-          <li>link 8</li>
-          <li>link 9</li>
+          <li><a href="http://notflix.com/search.php">Search</a></li>
+          <li><a href="http://notflix.com/accounts/watchlist.php">Watchlist</a></li>
+          <li><a href="http://notflix.com/accounts/account.php">Account</a></li>
         </ul>
       </div>
     </div>
   </div>
   <div class="aboutsec">
-    <h3>about me</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer facilisis, risus hendrerit rhoncus viverra, leo enim maximus tellus, vitae tincidunt nunc odio a felis. Suspendisse ornare diam vitae nisi dignissim ullamcorper. Praesent fermentum accumsan auctor. Maecenas placerat purus metus. Cras nibh elit, pharetra id blandit vitae, viverra ultrices magna. Etiam diam mauris, fermentum nec rutrum quis, faucibus quis nisl. Quisque at sapien mauris.</p>
+    <h3>About Notflix</h3>
+    <p>Notflix was created to make Viewing download media easier by provideing a free streaming service like experiance hosted directly on a local network. if you have any issues, want any show not yet available or want a feature added please you one of the links provided</p>
   </div>
 </div>
