@@ -44,11 +44,18 @@ if (isset($_SESSION["user_id"])) {
           </div>
         </div>
       </div>
+      <div class="div3-4">
       <div class="div3">
         <?php
           include($_SERVER["DOCUMENT_ROOT"] . "/accounts/showreq.php");
          ?>
       </div>
+      <div class="div4">
+        <?php
+          include($_SERVER["DOCUMENT_ROOT"] . "/accounts/showbug.php");
+         ?>
+      </div>
+    </div>
       </div>
       <?php else: ?>
         <div class="nologout">

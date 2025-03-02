@@ -16,7 +16,7 @@
 <button class="account-button" onclick="window.location.href='http://notflix.com/accounts/account.php';">Account</button>
   <div id="dropdown" class="dropdown-content">
       <a href="http://notflix.com/template/request.php">Request Show</a>
-      <a href="http://notflix.com/">Report</a>
+      <a href="http://notflix.com/template/bugrep.php">Report Bug</a>
       <a href="http://notflix.com/template/feature.php">Request Feature</a>
   </div>
 </html>
