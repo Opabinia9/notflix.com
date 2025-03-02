@@ -23,15 +23,17 @@ DROP TABLE IF EXISTS `comments`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `comments` (
+  `CID` int NOT NULL AUTO_INCREMENT,
   `AccountID` int NOT NULL,
   `SeriesID` int NOT NULL,
   `Content` varchar(300) DEFAULT NULL,
-  `DateCreated` date DEFAULT NULL,
-  PRIMARY KEY (`AccountID`,`SeriesID`),
-  KEY `SeriesID` (`SeriesID`),
+  `PostDate` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`CID`),
+  KEY `comments_ibfk_1` (`AccountID`),
+  KEY `comments_ibfk_2` (`SeriesID`),
   CONSTRAINT `comments_ibfk_1` FOREIGN KEY (`AccountID`) REFERENCES `users` (`AccountID`),
   CONSTRAINT `comments_ibfk_2` FOREIGN KEY (`SeriesID`) REFERENCES `media` (`SeriesID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,6 +42,7 @@ CREATE TABLE `comments` (
 
 LOCK TABLES `comments` WRITE;
 /*!40000 ALTER TABLE `comments` DISABLE KEYS */;
+INSERT INTO `comments` VALUES (1,2,1,'jojofnjasdsjdfn','2025-03-01 22:07:17'),(2,2,1,'a comment wow','2025-03-01 22:07:25');
 /*!40000 ALTER TABLE `comments` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -173,8 +176,8 @@ CREATE TABLE `watchlist` (
   `SeriesID` int NOT NULL,
   `SeasonID` int NOT NULL,
   `EpisodeID` int NOT NULL,
-  `PostDate` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`AccountID`,`SeriesID`,`SeasonID`,`EpisodeID`),
+  `Time_code` time DEFAULT '00:00:00',
+  PRIMARY KEY (`AccountID`,`SeriesID`),
   KEY `SeriesID` (`SeriesID`),
   KEY `SeasonID` (`SeasonID`),
   KEY `EpisodeID` (`EpisodeID`),
@@ -191,6 +194,7 @@ CREATE TABLE `watchlist` (
 
 LOCK TABLES `watchlist` WRITE;
 /*!40000 ALTER TABLE `watchlist` DISABLE KEYS */;
+INSERT INTO `watchlist` VALUES (2,1,0,1,'00:00:10'),(2,3,1,1,'00:00:58');
 /*!40000 ALTER TABLE `watchlist` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -203,4 +207,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-02-28 16:44:13
+-- Dump completed on 2025-03-02  9:08:32

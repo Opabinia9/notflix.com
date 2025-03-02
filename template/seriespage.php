@@ -235,6 +235,7 @@ if(isset($_SESSION["user_id"])){
       </div>
       </div>
     ');
+    include($_SERVER["DOCUMENT_ROOT"] . "/template/comments.php");
     ?>
   </main>
   <footer>

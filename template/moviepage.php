@@ -1,48 +1,48 @@
 <!DOCTYPE html>
 <?php
-session_start();
-include($_SERVER["DOCUMENT_ROOT"] . "/template/dbconnect.php");
-if(isset($_SESSION["user_id"])){
-  $userid = $_SESSION["user_id"];
-  $sql = "SELECT * FROM Watchlist WHERE AccountID = {$_SESSION["user_id"]} AND SeriesID = $SeriesID";
-  $result = $conn->query($sql);
-  if ($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
-      $SeasonID = $row["SeasonID"];
-      $EpisodeID = $row["EpisodeID"];
-      $playbackPosition = $row["Time_code"];
+  session_start();
+  include($_SERVER["DOCUMENT_ROOT"] . "/template/dbconnect.php");
+  if(isset($_SESSION["user_id"])){
+    $userid = $_SESSION["user_id"];
+    $sql = "SELECT * FROM Watchlist WHERE AccountID = {$_SESSION["user_id"]} AND SeriesID = $SeriesID";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+      while($row = $result->fetch_assoc()) {
+        $SeasonID = $row["SeasonID"];
+        $EpisodeID = $row["EpisodeID"];
+        $playbackPosition = $row["Time_code"];
+      }
+    } else {
+      $playbackPosition =  "0:0:0";
     }
   } else {
     $playbackPosition =  "0:0:0";
   }
-} else {
-  $playbackPosition =  "0:0:0";
-}
-  include($_SERVER["DOCUMENT_ROOT"] . "/template/dbconnect.php");
-  $SeasonID = 0;
-  $EpisodeID = 1;
-  $sql = "SELECT * FROM Media WHERE SeriesID = $SeriesID";
-  $result = $conn->query($sql);
-  if ($result->num_rows > 0) {
-      while($row = $result->fetch_assoc()) {
-        $title = $row["Title"];
-        $description = $row["Description"];
-        $releaseyear = $row["ReleaseYear"];
-        $length = $row["Length"];
-        $poster = $row["Poster"];
-      }
-  } else {echo "0 results";}
-  $sql = "SELECT * FROM Episode WHERE SeriesID = $SeriesID AND SeasonID = $SeasonID AND EpisodeID = $EpisodeID";
-  $result = $conn->query($sql);
-  if ($result->num_rows > 0) {
-      while($row = $result->fetch_assoc()) {
-        $available = $row["Available"];
-        $URL = $row["URL"];
-      }
-  } else {echo "0 results";}
+    include($_SERVER["DOCUMENT_ROOT"] . "/template/dbconnect.php");
+    $SeasonID = 0;
+    $EpisodeID = 1;
+    $sql = "SELECT * FROM Media WHERE SeriesID = $SeriesID";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) {
+          $title = $row["Title"];
+          $description = $row["Description"];
+          $releaseyear = $row["ReleaseYear"];
+          $length = $row["Length"];
+          $poster = $row["Poster"];
+        }
+    } else {echo "0 results";}
+    $sql = "SELECT * FROM Episode WHERE SeriesID = $SeriesID AND SeasonID = $SeasonID AND EpisodeID = $EpisodeID";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) {
+          $available = $row["Available"];
+          $URL = $row["URL"];
+        }
+    } else {echo "0 results";}
 
-  $conn->close();
- ?>
+    $conn->close();
+  ?>
  <html lang="en" class="moviepage">
   <head>
     <title><?php echo $title; ?></title>
@@ -125,7 +125,8 @@ if(isset($_SESSION["user_id"])){
               </div>
             </div>
           </div>
-          ');
+        ');
+        include($_SERVER["DOCUMENT_ROOT"] . "/template/comments.php");
        ?>
     </main>
     <footer>
