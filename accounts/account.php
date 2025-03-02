@@ -32,6 +32,9 @@ if (isset($_SESSION["user_id"])) {
       <?php if (isset($user)): ?>
         <div class="alldiv">
           <div class="div1">
+            <?php
+              include($_SERVER["DOCUMENT_ROOT"] . "/accounts/showfeat.php");
+             ?>
           </div>
           <div class="div2">
           <div class="yeslogout">
