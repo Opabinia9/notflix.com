@@ -1,21 +1,21 @@
 <?php
-if (empty($_POST["name"])) {
+if (empty(htmlspecialchars($_POST["name"]))) {
     die("Name is required");
 }
-if (strlen($_POST["password"]) < 8) {
+if (strlen(htmlspecialchars($_POST["password"])) < 8) {
     die("Password must be at least 8 characters");
 }
-if (!preg_match("/[a-z]/i", $_POST["password"])) {
+if (!preg_match("/[a-z]/i", htmlspecialchars($_POST["password"]))) {
     die("Password must contain at least one letter");
 }
-if ( ! preg_match("/[0-9]/", $_POST["password"])) {
+if ( ! preg_match("/[0-9]/", htmlspecialchars($_POST["password"]))) {
     die("Password must contain at least one number");
 }
-if ($_POST["password"] !== $_POST["password_confirmation"]) {
+if (htmlspecialchars($_POST["password"]) !== htmlspecialchars($_POST["password_confirmation"])) {
     die("Passwords must match");
 }
 $salt = random_bytes(16);
-$saltedPassword = $salt . $_POST["password"];
+$saltedPassword = $salt . htmlspecialchars($_POST["password"]);
 $password_hash = password_hash($saltedPassword, PASSWORD_DEFAULT);
 include($_SERVER["DOCUMENT_ROOT"] . "/template/dbconnect.php");
 $sql = "INSERT INTO Users (Username, Password_hash, DateCreated, Salt)
@@ -26,7 +26,7 @@ if ( ! $stmt->prepare($sql)) {
 }
 $DateCreated = date("Y-m-d");
 $stmt->bind_param("ssss",
-                  $_POST["name"],
+                  htmlspecialchars($_POST["name"]),
                   $password_hash,
                   $DateCreated,
                   $salt);

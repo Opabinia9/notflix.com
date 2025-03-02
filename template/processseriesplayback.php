@@ -2,11 +2,11 @@
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     include($_SERVER["DOCUMENT_ROOT"] . "/template/dbconnect.php");
 
-$playbackTime = $_POST['time'];
-$AccountID = $_POST['user_id'];
-$SeriesID = $_POST['series'];
-$SeasonID = $_POST['season'];
-$EpisodeID = $_POST['episode'];
+$playbackTime = htmlspecialchars($_POST['time']);
+$AccountID = htmlspecialchars($_POST['user_id']);
+$SeriesID = htmlspecialchars($_POST['series']);
+$SeasonID = htmlspecialchars($_POST['season']);
+$EpisodeID = htmlspecialchars($_POST['episode']);
 
 $sql = "INSERT INTO Watchlist (AccountID,SeriesID,SeasonID,EpisodeID,Time_code)
         VALUES (?, ?, ?, ?, ?)

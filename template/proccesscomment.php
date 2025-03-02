@@ -7,11 +7,11 @@ if ( ! $stmt->prepare($sql)) {
     die("SQL error: " . $mysqli->error);
 }
 $stmt->bind_param("sss",
-                  $_POST['uid'],
-                  $_POST['sid'],
-                  $_POST['message']);
+                  htmlspecialchars($_POST['uid']),
+                  htmlspecialchars($_POST['sid']),
+                  htmlspecialchars($_POST['message']));
 if ($stmt->execute()) {
-    header("Location: ".$_POST['url']);
+    header("Location: ".htmlspecialchars($_POST['url']));
     exit;
 } else {die($mysqli->error . " " . $mysqli->errno);}
 ?>

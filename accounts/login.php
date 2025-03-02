@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $result = $conn->query($sql);
     $user = $result->fetch_assoc();
     if ($user) {
-        $saltedPassword = $user["Salt"] . $_POST["password"];
+        $saltedPassword = $user["Salt"] . htmlspecialchars($_POST["password"]);
         if (password_verify($saltedPassword, $user["Password_hash"])) {
             session_start();
             session_regenerate_id();

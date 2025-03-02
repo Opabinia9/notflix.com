@@ -7,8 +7,8 @@ if ( ! $stmt->prepare($sql)) {
     die("SQL error: " . $mysqli->error);
 }
 $stmt->bind_param("ss",
-                  $_POST['uid'],
-                  $_POST['request']);
+                  htmlspecialchars($_POST['uid']),
+                  htmlspecialchars($_POST['request']));
 if ($stmt->execute()) {
     header("Location: http://notflix.com/accounts/account.php");
     exit;
