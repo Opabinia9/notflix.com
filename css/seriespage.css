@@ -81,8 +81,11 @@ video:fullscreen{
 }
 .episode{
   box-sizing: border-box;
+  min-width: 150px;
   width: 20%;
   height: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 
 }
 .episode input {
@@ -94,13 +97,15 @@ video:fullscreen{
   padding: 5px 15px 5px 15px;
   height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   text-align: center;
+  flex-flow: wrap;
   margin: 1%;
   border-radius: 15px;
   border: none;
   cursor: pointer;
+  border: 2px solid black;
 }
 .episode input:checked ~ .eplable{
   background-color: red;
@@ -119,8 +124,9 @@ video:fullscreen{
 .episodes-outer{
   box-sizing: border-box;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-flow: wrap;
 }
 /**/
 .spouterdiv{

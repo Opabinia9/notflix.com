@@ -11,7 +11,15 @@
       $result = $stmt->get_result();
       $queryresults = mysqli_num_rows($result);
       if (!$queryresults > 0) {
+        echo  "<script>alert('Username Unavailable');</script>";
         die("Username Unavailable");
+
+
+
+
+
+
+
     }
   }
 echo "fsdfsdf<br>";

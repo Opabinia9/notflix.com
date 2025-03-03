@@ -76,7 +76,8 @@ if(isset($_SESSION["user_id"])){
       $length = $row["Length"];
       $poster = $row["Poster"];
     }
-  } else {echo "0 results";}
+  } else {//echo "0 results";
+  }
   $sql = "SELECT * FROM Episode WHERE SeriesID = $SeriesID AND SeasonID = $SeasonID AND EpisodeID = $EpisodeID";
   $result = $conn->query($sql);
   if ($result->num_rows > 0) {
@@ -84,7 +85,8 @@ if(isset($_SESSION["user_id"])){
       $available = $row["Available"];
       $URL = $row["URL"];
     }
-  } else {echo "0 results";}
+  } else {//echo "0 results";
+  }
   $conn->close();
 ?>
 <html lang="en" class="moviepage">
@@ -94,7 +96,7 @@ if(isset($_SESSION["user_id"])){
     <meta charset="UTF-8">
     <meta name="descrpittion" content="movie1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="http://notflix.com/css/general.css">
+    <link rel="stylesheet" type="text/" href="http://notflix.com/css/general.css">
     <link rel="stylesheet" type="text/css" href="http://notflix.com/css/seriespage.css">
     <script src="http://notflix.com/js/seriespage.js"></script>
   </head>
@@ -108,6 +110,7 @@ if(isset($_SESSION["user_id"])){
   </header>
   <main>
     <?php
+    if (!isset($URL)){$URL = "http://Notflix.com";}
       echo ('<video poster='.$poster.' src="'.$URL.'" id="videoPlayer" controls>Sad Face :(</video> ');
       if(isset($_SESSION["user_id"])){
         ?>
@@ -164,7 +167,7 @@ if(isset($_SESSION["user_id"])){
       <div class="line"></div>
       </button>
       <div id="seasonSelector" class="seasons">
-      <form method="POST" action="http://notflix.com/series/3.php" id="selection" class="test">
+      <form method="POST" action="'.$topurl.'" id="selection" class="test">
     ');
     include($_SERVER["DOCUMENT_ROOT"] . "/template/dbconnect.php");
     $sql = "SELECT * FROM Season WHERE SeriesID = $SeriesID";
@@ -183,7 +186,7 @@ if(isset($_SESSION["user_id"])){
         </label>
       ');
       }
-    } else {echo "0 results";}
+    } else {}
     $conn->close();
     echo ('
       </div>
@@ -209,7 +212,8 @@ if(isset($_SESSION["user_id"])){
         </label>
       ';
       }
-    } else {echo "0 results";}
+    } else {//echo "0 results";
+    }
     $conn->close();
     echo ('
       </form>
