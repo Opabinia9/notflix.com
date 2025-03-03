@@ -86,7 +86,7 @@ CREATE TABLE `episode` (
   `EpisodeTitle` varchar(50) DEFAULT NULL,
   `Length` varchar(7) DEFAULT NULL,
   `Available` tinyint(1) DEFAULT '0',
-  `URL` varchar(255) DEFAULT NULL,
+  `URL` varchar(255) DEFAULT 'http://notflix.com',
   PRIMARY KEY (`SeriesID`,`SeasonID`,`EpisodeID`),
   KEY `SeasonID` (`SeasonID`),
   KEY `watchlist_ibfk_4` (`EpisodeID`),
@@ -101,6 +101,7 @@ CREATE TABLE `episode` (
 
 LOCK TABLES `episode` WRITE;
 /*!40000 ALTER TABLE `episode` DISABLE KEYS */;
+INSERT INTO `episode` VALUES (1,1,1,'?','?',0,'http://notflix.com/videos/san114/Series/AllTogetherNow/S1E10.mp4'),(1,1,2,'?','?',0,'http://notflix.com/videos/san114/Series/AllTogetherNow/S1E10.mp4'),(1,1,3,'?','?',0,'http://notflix.com/videos/san114/Series/AllTogetherNow/S1E10.mp4'),(1,1,4,'?','?',0,'http://notflix.com/videos/san114/Series/AllTogetherNow/S1E10.mp4'),(1,1,5,'?','?',0,'http://notflix.com/videos/san114/Series/AllTogetherNow/S1E10.mp4'),(1,1,6,'?','?',0,'http://notflix.com/videos/san114/Series/AllTogetherNow/S1E10.mp4'),(1,1,7,'?','?',0,'http://notflix.com/videos/san114/Series/AllTogetherNow/S1E10.mp4'),(1,1,8,'I Wanna Be Bobby\'s Girl','21m',0,'http://notflix.com/videos/san114/Series/AllTogetherNow/S1E10.mp4'),(1,1,9,'Watching the Detectives','22m',0,'http://notflix.com/videos/san114/Series/AllTogetherNow/S1E10.mp4'),(1,1,10,'Look What They\'ve Done To My Song','22m',1,'http://notflix.com/'),(1,1,11,'Whiter Shade Of Pale','22m',1,'http://notflix.com/'),(1,1,12,'Emotional Rescue','21m',1,'http://notflix.com/'),(1,1,13,'The Green, Green Grass Of Home','21m',1,'http://notflix.com/'),(1,1,14,'The Lion Sleeps Tonight','21m',1,'http://notflix.com/'),(1,1,15,'When A Man Loves A Woman','21m',1,'http://notflix.com/'),(1,1,16,'Beast Of Burden','21m',1,'http://notflix.com/');
 /*!40000 ALTER TABLE `episode` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -149,7 +150,7 @@ CREATE TABLE `media` (
   `Poster` varchar(255) DEFAULT 'http://notflix.com/imgs/default.jpg',
   PRIMARY KEY (`SeriesID`),
   CONSTRAINT `media_chk_1` CHECK ((`NOS` >= 0))
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -158,6 +159,7 @@ CREATE TABLE `media` (
 
 LOCK TABLES `media` WRITE;
 /*!40000 ALTER TABLE `media` DISABLE KEYS */;
+INSERT INTO `media` VALUES (1,'All Together Now','One-time Rock\'n\'Roll star Bobby Rivers discovers he has 15-year-old twins when his former lover dies',1991,'25m',4,1,'http://notflix.com/imgs/Shows/alltogethernow.jpg'),(2,'Buffy the Vampire Slayer','A young woman, destined to slay vampires, demons and other infernal creatures, deals with her life f',1997,'44m',7,1,'http://notflix.com/imgs/Shows/BTVS.jpg'),(3,'Lucifer','Lucifer Morningstar has decided he\'s had enough of being the dutiful servant in Hell and decides to ',2016,'45m',6,1,'http://notflix.com/imgs/Shows/lucifer.jpg');
 /*!40000 ALTER TABLE `media` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -211,6 +213,7 @@ CREATE TABLE `season` (
 
 LOCK TABLES `season` WRITE;
 /*!40000 ALTER TABLE `season` DISABLE KEYS */;
+INSERT INTO `season` VALUES (1,1,21),(1,2,23),(1,3,26),(1,4,31),(2,1,12),(2,2,22),(2,3,22),(2,4,22),(2,5,22),(2,6,22),(2,7,22),(3,1,13),(3,2,18),(3,3,26),(3,4,10),(3,5,16),(3,6,10);
 /*!40000 ALTER TABLE `season` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -229,7 +232,7 @@ CREATE TABLE `users` (
   `Salt` varbinary(16) DEFAULT NULL,
   PRIMARY KEY (`AccountID`),
   UNIQUE KEY `Username` (`Username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -283,4 +286,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-03-03 12:00:11
+-- Dump completed on 2025-03-03 20:03:57
