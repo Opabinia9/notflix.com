@@ -1,4 +1,20 @@
 <?php
+    $username = htmlspecialchars($_POST["name"]);
+    include($_SERVER["DOCUMENT_ROOT"] . "/template/dbconnect.php");
+    $sql = "SELECT * FROM users WHERE AccountID = ?";
+    $stmt = $conn->stmt_init();
+    if (!$stmt->prepare($sql)) {
+        die("SQL error: " . $stmt->error);
+    }
+    $stmt->bind_param("s", $username);
+    if ($stmt->execute()) {
+      $result = $stmt->get_result();
+      $queryresults = mysqli_num_rows($result);
+      if (!$queryresults > 0) {
+        die("Username Unavailable");
+    }
+  }
+echo "fsdfsdf<br>";
 if (empty(htmlspecialchars($_POST["name"]))) {
     die("Name is required");
 }
@@ -21,23 +37,16 @@ include($_SERVER["DOCUMENT_ROOT"] . "/template/dbconnect.php");
 $sql = "INSERT INTO Users (Username, Password_hash, DateCreated, Salt)
         VALUES (?, ?, ?, ?)";
 $stmt = $conn->stmt_init();
-if ( ! $stmt->prepare($sql)) {
-    die("SQL error: " . $mysqli->error);
+if (!$stmt->prepare($sql)) {
+    die("SQL error: " . $stmt->error);
 }
 $name = htmlspecialchars($_POST["name"]);
 $DateCreated = date("Y-m-d");
-$stmt->bind_param("ssss",
-                  $name,
-                  $password_hash,
-                  $DateCreated,
-                  $salt);
-                  if ($stmt->execute()) {
-                      header("Location: http://notflix.com/accounts/signup-success.html");
-                      exit;
-                  } else {
-                      if ($stmt->errno === 1062) {
-                          die("Username already taken");
-                      } else {
-                          die($stmt->error . " " . $stmt->errno);
-                      }
-                  }
+$stmt->bind_param("ssss", $name, $password_hash, $DateCreated, $salt);
+if ($stmt->execute()) {
+    header("Location: http://notflix.com/accounts/signup-success.html");
+    exit;
+} else {
+    die($stmt->error . " " . $stmt->errno);
+}
+?>
