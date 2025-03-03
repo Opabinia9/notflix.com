@@ -24,19 +24,20 @@ $stmt = $conn->stmt_init();
 if ( ! $stmt->prepare($sql)) {
     die("SQL error: " . $mysqli->error);
 }
+$name = htmlspecialchars($_POST["name"]);
 $DateCreated = date("Y-m-d");
 $stmt->bind_param("ssss",
-                  htmlspecialchars($_POST["name"]),
+                  $name,
                   $password_hash,
                   $DateCreated,
                   $salt);
-if ($stmt->execute()) {
-    header("Location: http://notflix.com/accounts/signup-success.html");
-    exit;
-} else {
-    if ($mysqli->errno === 1062) {
-        die("email already taken");
-    } else {
-        die($mysqli->error . " " . $mysqli->errno);
-    }
-}
+                  if ($stmt->execute()) {
+                      header("Location: http://notflix.com/accounts/signup-success.html");
+                      exit;
+                  } else {
+                      if ($stmt->errno === 1062) {
+                          die("Username already taken");
+                      } else {
+                          die($stmt->error . " " . $stmt->errno);
+                      }
+                  }
