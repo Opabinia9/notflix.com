@@ -102,7 +102,7 @@ CREATE TABLE `episode` (
 
 LOCK TABLES `episode` WRITE;
 /*!40000 ALTER TABLE `episode` DISABLE KEYS */;
-INSERT INTO `episode` VALUES (1,1,1,'?','?',0,'http://notflix.com/'),(1,1,2,'?','?',0,'http://notflix.com/'),(1,1,3,'?','?',0,'http://notflix.com/'),(1,1,4,'?','?',0,'http://notflix.com/'),(1,1,5,'?','?',0,'http://notflix.com/'),(1,1,6,'?','?',0,'http://notflix.com/'),(1,1,7,'?','?',0,'http://notflix.com/'),(1,1,8,'I Wanna Be Bobby\'s Girl','21m',0,'http://notflix.com/'),(1,1,9,'Watching the Detectives','22m',0,'http://notflix.com/'),(1,1,10,'Look What They\'ve Done To My Song','22m',1,'http://notflix.com/'),(1,1,11,'Whiter Shade Of Pale','22m',1,'http://notflix.com/'),(1,1,12,'Emotional Rescue','21m',1,'http://notflix.com/'),(1,1,13,'The Green, Green Grass Of Home','21m',1,'http://notflix.com/'),(1,1,14,'The Lion Sleeps Tonight','21m',1,'http://notflix.com/'),(1,1,15,'When A Man Loves A Woman','21m',1,'http://notflix.com/'),(1,1,16,'Beast Of Burden','21m',1,'http://notflix.com/'),(2,2,1,'When She Was Bad','45m',0,'http://notflix.com'),(2,2,2,'Some Assembly Required','44m',0,'http://notflix.com'),(2,2,3,'School Hard','44m',0,'http://notflix.com'),(2,2,4,'Inca Mummy Girl','44m',0,'http://notflix.com'),(2,2,5,'Reptile Boy','44m',0,'http://notflix.com'),(2,2,6,'Halloween','44m',0,'http://notflix.com'),(2,2,7,'Lie to Me','45m',0,'http://notflix.com'),(2,2,8,'The Dark Age','45m',0,'http://notflix.com'),(2,2,9,'What\'s My Line?: Part 1','1h',0,'http://notflix.com'),(2,2,11,'Ted','45m',0,'http://notflix.com'),(2,2,12,'Bad Eggs','1h',0,'http://notflix.com'),(2,2,13,'Surprise','1h',0,'http://notflix.com'),(2,2,14,'Innocence','1h',0,'http://notflix.com'),(2,2,15,'Phases','1h',0,'http://notflix.com'),(2,2,16,'Bewitched, Bothered and Bewildered','1h',0,'http://notflix.com/videos/san114/Series/BTVS/S1E16.mp4/'),(2,2,17,'Passion','1h',0,'http://notflix.com/videos/san114/Series/BTVS/S1E17.mp4/'),(2,2,18,'Killed by Death','1h',0,'http://notflix.com/videos/san114/Series/BTVS/S1E18.mp4/'),(2,2,19,'I Only Have Eyes for You','1h',0,'http://notflix.com/videos/san114/Series/BTVS/S1E19.mp4/'),(2,2,20,'Go Fish','1h',0,'http://notflix.com/videos/san114/Series/BTVS/S1E20.mp4/'),(2,2,21,'Becoming: Part 1','1h',0,'http://notflix.com/videos/san114/Series/BTVS/S1E21.mp4/'),(2,2,22,'Becoming: Part 2','44m',0,'http://notflix.com/videos/san114/Series/BTVS/S1E22.mp4/');
+INSERT INTO `episode` VALUES (1,1,1,'?','?',0,'http://notflix.com/'),(1,1,2,'?','?',0,'http://notflix.com/'),(1,1,3,'?','?',0,'http://notflix.com/'),(1,1,4,'?','?',0,'http://notflix.com/'),(1,1,5,'?','?',0,'http://notflix.com/'),(1,1,6,'?','?',0,'http://notflix.com/'),(1,1,7,'?','?',0,'http://notflix.com/'),(1,1,8,'I Wanna Be Bobby\'s Girl','21m',0,'http://notflix.com/'),(1,1,9,'Watching the Detectives','22m',0,'http://notflix.com/'),(1,1,10,'Look What They\'ve Done To My Song','22m',1,'http://notflix.com/'),(1,1,11,'Whiter Shade Of Pale','22m',1,'http://notflix.com/'),(1,1,12,'Emotional Rescue','21m',1,'http://notflix.com/'),(1,1,13,'The Green, Green Grass Of Home','21m',1,'http://notflix.com/'),(1,1,14,'The Lion Sleeps Tonight','21m',1,'http://notflix.com/'),(1,1,15,'When A Man Loves A Woman','21m',1,'http://notflix.com/'),(1,1,16,'Beast Of Burden','21m',1,'http://notflix.com/videos/san114/Series/BTVS/S2E16.mp4'),(2,2,1,'When She Was Bad','45m',0,'http://notflix.com'),(2,2,2,'Some Assembly Required','44m',0,'http://notflix.com'),(2,2,3,'School Hard','44m',0,'http://notflix.com'),(2,2,4,'Inca Mummy Girl','44m',0,'http://notflix.com'),(2,2,5,'Reptile Boy','44m',0,'http://notflix.com'),(2,2,6,'Halloween','44m',0,'http://notflix.com'),(2,2,7,'Lie to Me','45m',0,'http://notflix.com'),(2,2,8,'The Dark Age','45m',0,'http://notflix.com'),(2,2,9,'What\'s My Line?: Part 1','1h',0,'http://notflix.com'),(2,2,11,'Ted','45m',0,'http://notflix.com'),(2,2,12,'Bad Eggs','1h',0,'http://notflix.com'),(2,2,13,'Surprise','1h',0,'http://notflix.com'),(2,2,14,'Innocence','1h',0,'http://notflix.com'),(2,2,15,'Phases','1h',0,'http://notflix.com'),(2,2,16,'Bewitched, Bothered and Bewildered','1h',0,'http://notflix.com/videos/san114/Series/BTVS/S2E16.mp4'),(2,2,17,'Passion','1h',0,'http://notflix.com/videos/san114/Series/BTVS/S1E17.mp4/'),(2,2,18,'Killed by Death','1h',0,'http://notflix.com/videos/san114/Series/BTVS/S1E18.mp4/'),(2,2,19,'I Only Have Eyes for You','1h',0,'http://notflix.com/videos/san114/Series/BTVS/S1E19.mp4/'),(2,2,20,'Go Fish','1h',0,'http://notflix.com/videos/san114/Series/BTVS/S1E20.mp4/'),(2,2,21,'Becoming: Part 1','1h',0,'http://notflix.com/videos/san114/Series/BTVS/S1E21.mp4/'),(2,2,22,'Becoming: Part 2','44m',0,'http://notflix.com/videos/san114/Series/BTVS/S1E22.mp4/');
 /*!40000 ALTER TABLE `episode` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -235,7 +235,7 @@ CREATE TABLE `users` (
   `Salt` varbinary(16) DEFAULT NULL,
   PRIMARY KEY (`AccountID`),
   UNIQUE KEY `Username` (`Username`)
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -244,7 +244,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (23,'Ali-cat','$2y$10$HyI/A0nQKlxwNWFSGM7ktOVNci4cZ2XYGBs6q1nnfnhMpy.iqvxcm','2025-03-04',_binary '¢¼W©¾…}\Ã\Ðuž\Í'),(24,'PoigusJoigus','$2y$10$qMEocr3bCloP3SNqQbZnC.7Y1tRHzcXRrwzWID.l6kOxMGd6C0XjK','2025-03-04',_binary '\\”\ä¦üMN\ç£%%x\\o');
+INSERT INTO `users` VALUES (23,'Ali-cat','$2y$10$HyI/A0nQKlxwNWFSGM7ktOVNci4cZ2XYGBs6q1nnfnhMpy.iqvxcm','2025-03-04',_binary '¢¼W©¾…}\Ã\Ðuž\Í'),(24,'PoigusJoigus','$2y$10$qMEocr3bCloP3SNqQbZnC.7Y1tRHzcXRrwzWID.l6kOxMGd6C0XjK','2025-03-04',_binary '\\”\ä¦üMN\ç£%%x\\o'),(25,'Orik','$2y$10$I6sg8y6zT9kPvv2r..OKiu.ElI.GHcMRQTEY3FK2x5N8xTgDuUcIC','2025-03-04',_binary '_+*s3Bz/£H¬´ø\à');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -278,6 +278,7 @@ CREATE TABLE `watchlist` (
 
 LOCK TABLES `watchlist` WRITE;
 /*!40000 ALTER TABLE `watchlist` DISABLE KEYS */;
+INSERT INTO `watchlist` VALUES (25,2,2,16,'00:43:46');
 /*!40000 ALTER TABLE `watchlist` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -290,4 +291,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-03-04 16:07:42
+-- Dump completed on 2025-03-04 21:20:14
