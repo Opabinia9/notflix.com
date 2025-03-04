@@ -1,6 +1,6 @@
 <h3>Your Features</h3>
 <?php
-$sql = "SELECT * FROM Features WHERE AccountID = $AccountID ORDER BY RequestDate DESC;";
+$sql = "SELECT * FROM features WHERE AccountID = $AccountID ORDER BY RequestDate DESC;";
 $stmt = $conn->prepare($sql);
 $stmt->execute();
 $result = $stmt->get_result();

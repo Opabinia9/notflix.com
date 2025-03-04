@@ -13,13 +13,6 @@
       if (!$queryresults > 0) {
         echo  "<script>alert('Username Unavailable');</script>";
         die("Username Unavailable");
-
-
-
-
-
-
-
     }
   }
 echo "fsdfsdf<br>";
@@ -42,7 +35,7 @@ $salt = random_bytes(16);
 $saltedPassword = $salt . htmlspecialchars($_POST["password"]);
 $password_hash = password_hash($saltedPassword, PASSWORD_DEFAULT);
 include($_SERVER["DOCUMENT_ROOT"] . "/template/dbconnect.php");
-$sql = "INSERT INTO Users (Username, Password_hash, DateCreated, Salt)
+$sql = "INSERT INTO users (Username, Password_hash, DateCreated, Salt)
         VALUES (?, ?, ?, ?)";
 $stmt = $conn->stmt_init();
 if (!$stmt->prepare($sql)) {

@@ -1,6 +1,6 @@
 <?php
 include($_SERVER["DOCUMENT_ROOT"] . "/template/dbconnect.php");
-$sql = "INSERT INTO Comments (AccountID, SeriesID, Content)
+$sql = "INSERT INTO comments (AccountID, SeriesID, Content)
         VALUES (?, ?, ?)";
 $stmt = $conn->stmt_init();
 if ( ! $stmt->prepare($sql)) {

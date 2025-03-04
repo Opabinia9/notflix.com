@@ -8,7 +8,7 @@
 <hr>
 <?php
 include($_SERVER["DOCUMENT_ROOT"] . "/template/dbconnect.php");
-$sql = "SELECT * FROM Comments WHERE SeriesID = $SeriesID";
+$sql = "SELECT * FROM comments WHERE SeriesID = $SeriesID";
 $stmt = $conn->prepare($sql);
 $stmt->execute();
 $result = $stmt->get_result();

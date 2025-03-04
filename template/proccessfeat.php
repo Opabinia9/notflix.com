@@ -1,6 +1,6 @@
 <?php
 include($_SERVER["DOCUMENT_ROOT"] . "/template/dbconnect.php");
-$sql = "INSERT INTO Features (AccountID, Feature)
+$sql = "INSERT INTO features (AccountID, Feature)
         VALUES (?, ?)";
 $stmt = $conn->stmt_init();
 if ( ! $stmt->prepare($sql)) {

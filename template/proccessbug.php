@@ -1,6 +1,6 @@
 <?php
 include($_SERVER["DOCUMENT_ROOT"] . "/template/dbconnect.php");
-$sql = "INSERT INTO Bugrep (AccountID, Bug)
+$sql = "INSERT INTO bugrep (AccountID, Bug)
         VALUES (?, ?)";
 $stmt = $conn->stmt_init();
 if ( ! $stmt->prepare($sql)) {

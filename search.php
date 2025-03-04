@@ -24,7 +24,7 @@
     $searcharray = [];
   }
   include($_SERVER["DOCUMENT_ROOT"] . "/template/dbconnect.php");
-  $sql = "SELECT * FROM Media";
+  $sql = "SELECT * FROM media";
   $stmt = $conn->prepare($sql);
   $stmt->execute();
   $result = $stmt->get_result();
@@ -109,19 +109,19 @@
                 include($_SERVER["DOCUMENT_ROOT"] . "/template/dbconnect.php");
                 if ($avai == "All"){
                   if ($typeset == "All") {
-                    $sql = "SELECT * FROM Media WHERE SeriesID = $SeriesID";
+                    $sql = "SELECT * FROM media WHERE SeriesID = $SeriesID";
                   }elseif ($typeset == "Movies") {
-                    $sql = "SELECT * FROM Media WHERE SeriesID = $SeriesID AND NOS < 1";
+                    $sql = "SELECT * FROM media WHERE SeriesID = $SeriesID AND NOS < 1";
                   }elseif ($typeset == "Series") {
-                    $sql = "SELECT * FROM Media WHERE SeriesID = $SeriesID AND NOS > 0";
+                    $sql = "SELECT * FROM media WHERE SeriesID = $SeriesID AND NOS > 0";
                   }
                 } elseif($avai == "Available") {
                   if ($typeset == "All") {
-                    $sql = "SELECT * FROM Media WHERE SeriesID = $SeriesID AND Available = 1";
+                    $sql = "SELECT * FROM media WHERE SeriesID = $SeriesID AND Available = 1";
                   }elseif ($typeset == "Movies") {
-                    $sql = "SELECT * FROM Media WHERE SeriesID = $SeriesID AND NOS < 1 AND Available = 1";
+                    $sql = "SELECT * FROM media WHERE SeriesID = $SeriesID AND NOS < 1 AND Available = 1";
                   }elseif ($typeset == "Series") {
-                    $sql = "SELECT * FROM Media WHERE SeriesID = $SeriesID AND NOS > 0 AND Available = 1";
+                    $sql = "SELECT * FROM media WHERE SeriesID = $SeriesID AND NOS > 0 AND Available = 1";
                   }
                 }
                 $stmt = $conn->prepare($sql);

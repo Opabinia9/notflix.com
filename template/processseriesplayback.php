@@ -8,7 +8,7 @@ $SeriesID = htmlspecialchars($_POST['series']);
 $SeasonID = htmlspecialchars($_POST['season']);
 $EpisodeID = htmlspecialchars($_POST['episode']);
 
-$sql = "INSERT INTO Watchlist (AccountID,SeriesID,SeasonID,EpisodeID,Time_code)
+$sql = "INSERT INTO watchlist (AccountID,SeriesID,SeasonID,EpisodeID,Time_code)
         VALUES (?, ?, ?, ?, ?)
         ON DUPLICATE KEY UPDATE SeasonID = VALUES(SeasonID), EpisodeID = VALUES(EpisodeID), Time_code = VALUES(Time_code)";
 

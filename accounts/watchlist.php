@@ -38,7 +38,7 @@
                     $SeasonID = $row1['SeasonID'];
                     $EpisodeID = $row1['EpisodeID'];
                     $Time_code = $row1['Time_code'];
-                    $sql = "SELECT * FROM Media WHERE SeriesID = $SeriesID";
+                    $sql = "SELECT * FROM media WHERE SeriesID = $SeriesID";
                     $stmt = $conn->prepare($sql);
                     $stmt->execute();
                     $result = $stmt->get_result();

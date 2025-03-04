@@ -1,7 +1,7 @@
 <?php
 $db_server = "localhost";
-$db_user = "root";
-$db_pass = "krD5rchBxMy9mVgDzoTH";
+$db_user = "Notflix";
+$db_pass = "TgbzP4xPHw";
 $db_name = "NotflixDB";
 $conn = "";
 try{

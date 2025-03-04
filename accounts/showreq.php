@@ -1,6 +1,6 @@
 <h3>Your Requests</h3>
 <?php
-$sql = "SELECT * FROM Requests WHERE AccountID = $AccountID ORDER BY RequestDate DESC;";
+$sql = "SELECT * FROM requests WHERE AccountID = $AccountID ORDER BY RequestDate DESC;";
 $stmt = $conn->prepare($sql);
 $stmt->execute();
 $result = $stmt->get_result();

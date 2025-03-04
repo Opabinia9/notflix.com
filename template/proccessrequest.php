@@ -1,6 +1,6 @@
 <?php
 include($_SERVER["DOCUMENT_ROOT"] . "/template/dbconnect.php");
-$sql = "INSERT INTO Requests (AccountID, Request)
+$sql = "INSERT INTO requests (AccountID, Request)
         VALUES (?, ?)";
 $stmt = $conn->stmt_init();
 if ( ! $stmt->prepare($sql)) {

@@ -1,6 +1,6 @@
 <h3>Your Features</h3>
 <?php
-$sql = "SELECT * FROM Bugrep WHERE AccountID = $AccountID ORDER BY ReportDate DESC;";
+$sql = "SELECT * FROM bugrep WHERE AccountID = $AccountID ORDER BY ReportDate DESC;";
 $stmt = $conn->prepare($sql);
 $stmt->execute();
 $result = $stmt->get_result();

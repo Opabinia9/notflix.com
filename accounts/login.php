@@ -2,7 +2,7 @@
 $is_invalid = false;
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
   include($_SERVER["DOCUMENT_ROOT"] . "/template/dbconnect.php");
-    $sql = sprintf("SELECT * FROM Users
+    $sql = sprintf("SELECT * FROM users
                     WHERE Username = '%s'",
                    $conn->real_escape_string($_POST["username"]));
     $result = $conn->query($sql);

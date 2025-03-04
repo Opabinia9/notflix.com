@@ -5,7 +5,7 @@ include($_SERVER["DOCUMENT_ROOT"] . "/template/dbconnect.php");
 if(isset($_SESSION["user_id"])){
   $userid = $_SESSION["user_id"];
   if(isset($_POST['season'])){
-    $sql = "UPDATE Watchlist SET SeasonID = ? WHERE AccountID = ? AND SeriesID = ?";
+    $sql = "UPDATE watchlist SET SeasonID = ? WHERE AccountID = ? AND SeriesID = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("sss",htmlspecialchars($_POST['season']), $userid, $SeriesID);
     if ($stmt->execute()) {
@@ -15,7 +15,7 @@ if(isset($_SESSION["user_id"])){
     $stmt->close();
   }
   if(isset($_POST['selectedepisode'])){
-    $sql = "UPDATE Watchlist SET EpisodeID = ?, Time_code = '0:0:0' WHERE AccountID = ? AND SeriesID = ?";
+    $sql = "UPDATE watchlist SET EpisodeID = ?, Time_code = '0:0:0' WHERE AccountID = ? AND SeriesID = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("sss", htmlspecialchars($_POST['selectedepisode']), $userid, $SeriesID);
     if ($stmt->execute()) {
@@ -24,7 +24,7 @@ if(isset($_SESSION["user_id"])){
     }
     $stmt->close();
   }
-    $sql = "SELECT * FROM Watchlist WHERE AccountID = {$_SESSION["user_id"]} AND SeriesID = $SeriesID";
+    $sql = "SELECT * FROM watchlist WHERE AccountID = {$_SESSION["user_id"]} AND SeriesID = $SeriesID";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
       while($row = $result->fetch_assoc()) {
@@ -66,7 +66,7 @@ if(isset($_SESSION["user_id"])){
       $EpisodeID = $selectedep;
     }
   }
-  $sql = "SELECT * FROM Media WHERE SeriesID = $SeriesID";
+  $sql = "SELECT * FROM media WHERE SeriesID = $SeriesID";
   $result = $conn->query($sql);
   if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
@@ -78,7 +78,7 @@ if(isset($_SESSION["user_id"])){
     }
   } else {//echo "0 results";
   }
-  $sql = "SELECT * FROM Episode WHERE SeriesID = $SeriesID AND SeasonID = $SeasonID AND EpisodeID = $EpisodeID";
+  $sql = "SELECT * FROM episode WHERE SeriesID = $SeriesID AND SeasonID = $SeasonID AND EpisodeID = $EpisodeID";
   $result = $conn->query($sql);
   if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
@@ -170,7 +170,7 @@ if(isset($_SESSION["user_id"])){
       <form method="POST" action="'.$topurl.'" id="selection" class="test">
     ');
     include($_SERVER["DOCUMENT_ROOT"] . "/template/dbconnect.php");
-    $sql = "SELECT * FROM Season WHERE SeriesID = $SeriesID";
+    $sql = "SELECT * FROM season WHERE SeriesID = $SeriesID";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
       while($row = $result->fetch_assoc()) {
@@ -196,7 +196,7 @@ if(isset($_SESSION["user_id"])){
       <div class="episodes-outer">
     ');
     include($_SERVER["DOCUMENT_ROOT"] . "/template/dbconnect.php");
-    $sql = "SELECT * FROM Episode WHERE SeriesID = $SeriesID AND SeasonID = $selected";
+    $sql = "SELECT * FROM episode WHERE SeriesID = $SeriesID AND SeasonID = $selected";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
       while($row = $result->fetch_assoc()) {

@@ -26,9 +26,6 @@ if (isset($_SESSION["user_id"])) {
      </nav>
     </header>
     <main>
-      <?php
-      // TODO:404 page, drop .php, admin view of reports
-       ?>
       <h1 style="color:red; text-align:center;">
         Notflix
       </h1>
