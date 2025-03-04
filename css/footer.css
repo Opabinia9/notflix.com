@@ -43,10 +43,10 @@ li{
 .aboutsec{
   height: auto;
   width: 610px;
-  padding: 0px 0px 0px 0px
+  padding: 0px 0px 0px 0px;
 }
 li a{
-  color: inherit;
+  color: white;
   text-decoration: none;
 }
 li a:hover{

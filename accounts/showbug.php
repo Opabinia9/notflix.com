@@ -1,4 +1,4 @@
-<h3>Your Features</h3>
+<h3>Errors</h3>
 <?php
 $sql = "SELECT * FROM bugrep WHERE AccountID = $AccountID ORDER BY ReportDate DESC;";
 $stmt = $conn->prepare($sql);

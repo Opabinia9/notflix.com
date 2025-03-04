@@ -1,13 +1,13 @@
--- MySQL dump 10.13  Distrib 8.0.41, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.41, for Linux (x86_64)
 --
--- Host: localhost    Database: notflixdb
+-- Host: localhost    Database: NotflixDB
 -- ------------------------------------------------------
--- Server version	8.0.41
+-- Server version	8.0.41-0ubuntu0.24.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!50503 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -30,7 +30,7 @@ CREATE TABLE `bugrep` (
   PRIMARY KEY (`BID`),
   KEY `AccountID` (`AccountID`),
   CONSTRAINT `bugrep_ibfk_1` FOREIGN KEY (`AccountID`) REFERENCES `users` (`AccountID`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,6 +39,7 @@ CREATE TABLE `bugrep` (
 
 LOCK TABLES `bugrep` WRITE;
 /*!40000 ALTER TABLE `bugrep` DISABLE KEYS */;
+INSERT INTO `bugrep` VALUES (1,23,'I am the bug','2025-03-04 01:40:37');
 /*!40000 ALTER TABLE `bugrep` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -101,7 +102,7 @@ CREATE TABLE `episode` (
 
 LOCK TABLES `episode` WRITE;
 /*!40000 ALTER TABLE `episode` DISABLE KEYS */;
-INSERT INTO `episode` VALUES (1,1,1,'?','?',0,'http://notflix.com/videos/san114/Series/AllTogetherNow/S1E10.mp4'),(1,1,2,'?','?',0,'http://notflix.com/videos/san114/Series/AllTogetherNow/S1E10.mp4'),(1,1,3,'?','?',0,'http://notflix.com/videos/san114/Series/AllTogetherNow/S1E10.mp4'),(1,1,4,'?','?',0,'http://notflix.com/videos/san114/Series/AllTogetherNow/S1E10.mp4'),(1,1,5,'?','?',0,'http://notflix.com/videos/san114/Series/AllTogetherNow/S1E10.mp4'),(1,1,6,'?','?',0,'http://notflix.com/videos/san114/Series/AllTogetherNow/S1E10.mp4'),(1,1,7,'?','?',0,'http://notflix.com/videos/san114/Series/AllTogetherNow/S1E10.mp4'),(1,1,8,'I Wanna Be Bobby\'s Girl','21m',0,'http://notflix.com/videos/san114/Series/AllTogetherNow/S1E10.mp4'),(1,1,9,'Watching the Detectives','22m',0,'http://notflix.com/videos/san114/Series/AllTogetherNow/S1E10.mp4'),(1,1,10,'Look What They\'ve Done To My Song','22m',1,'http://notflix.com/'),(1,1,11,'Whiter Shade Of Pale','22m',1,'http://notflix.com/'),(1,1,12,'Emotional Rescue','21m',1,'http://notflix.com/'),(1,1,13,'The Green, Green Grass Of Home','21m',1,'http://notflix.com/'),(1,1,14,'The Lion Sleeps Tonight','21m',1,'http://notflix.com/'),(1,1,15,'When A Man Loves A Woman','21m',1,'http://notflix.com/'),(1,1,16,'Beast Of Burden','21m',1,'http://notflix.com/');
+INSERT INTO `episode` VALUES (1,1,1,'?','?',0,'http://notflix.com/'),(1,1,2,'?','?',0,'http://notflix.com/'),(1,1,3,'?','?',0,'http://notflix.com/'),(1,1,4,'?','?',0,'http://notflix.com/'),(1,1,5,'?','?',0,'http://notflix.com/'),(1,1,6,'?','?',0,'http://notflix.com/'),(1,1,7,'?','?',0,'http://notflix.com/'),(1,1,8,'I Wanna Be Bobby\'s Girl','21m',0,'http://notflix.com/'),(1,1,9,'Watching the Detectives','22m',0,'http://notflix.com/'),(1,1,10,'Look What They\'ve Done To My Song','22m',1,'http://notflix.com/'),(1,1,11,'Whiter Shade Of Pale','22m',1,'http://notflix.com/'),(1,1,12,'Emotional Rescue','21m',1,'http://notflix.com/'),(1,1,13,'The Green, Green Grass Of Home','21m',1,'http://notflix.com/'),(1,1,14,'The Lion Sleeps Tonight','21m',1,'http://notflix.com/'),(1,1,15,'When A Man Loves A Woman','21m',1,'http://notflix.com/'),(1,1,16,'Beast Of Burden','21m',1,'http://notflix.com/');
 /*!40000 ALTER TABLE `episode` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -120,7 +121,7 @@ CREATE TABLE `features` (
   PRIMARY KEY (`FID`),
   KEY `AccountID` (`AccountID`),
   CONSTRAINT `features_ibfk_1` FOREIGN KEY (`AccountID`) REFERENCES `users` (`AccountID`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -129,6 +130,7 @@ CREATE TABLE `features` (
 
 LOCK TABLES `features` WRITE;
 /*!40000 ALTER TABLE `features` DISABLE KEYS */;
+INSERT INTO `features` VALUES (1,23,'Yaoi on the homepage','2025-03-04 01:40:56'),(2,24,'Nyan Cat HoloGraphic jumpscares','2025-03-04 01:47:30');
 /*!40000 ALTER TABLE `features` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -178,7 +180,7 @@ CREATE TABLE `requests` (
   PRIMARY KEY (`RID`),
   KEY `AccountID` (`AccountID`),
   CONSTRAINT `requests_ibfk_1` FOREIGN KEY (`AccountID`) REFERENCES `users` (`AccountID`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -187,6 +189,7 @@ CREATE TABLE `requests` (
 
 LOCK TABLES `requests` WRITE;
 /*!40000 ALTER TABLE `requests` DISABLE KEYS */;
+INSERT INTO `requests` VALUES (1,23,'Your mum','2025-03-04 01:40:21'),(2,24,'How To Train your epilectic brother\r\n\r\nwww.epilepsyawareness.com','2025-03-04 01:46:43');
 /*!40000 ALTER TABLE `requests` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -232,7 +235,7 @@ CREATE TABLE `users` (
   `Salt` varbinary(16) DEFAULT NULL,
   PRIMARY KEY (`AccountID`),
   UNIQUE KEY `Username` (`Username`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -241,6 +244,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (23,'Ali-cat','$2y$10$HyI/A0nQKlxwNWFSGM7ktOVNci4cZ2XYGBs6q1nnfnhMpy.iqvxcm','2025-03-04',_binary '¢¼W©¾…}\Ã\Ðuž\Í'),(24,'PoigusJoigus','$2y$10$qMEocr3bCloP3SNqQbZnC.7Y1tRHzcXRrwzWID.l6kOxMGd6C0XjK','2025-03-04',_binary '\\”\ä¦üMN\ç£%%x\\o');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -286,4 +290,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-03-03 20:03:57
+-- Dump completed on 2025-03-04 13:00:55
