@@ -33,9 +33,9 @@ if (isset($_SESSION["user_id"])) {
       <p style="text-align: center; font-family: courier;">Welcome to notflix an offline streaming service just for us</p>
       <article>
         <section style="color:red; text-align: center;">
-          <h2><b>Pre-Debut</b></h2>
+          <h2><b>Luanch Night</b></h2>
         </section>
-        <section style="text-align: center; font-family: Courier;">Up Tonight</section>
+        <section style="text-align: center; font-family: Courier;">Online Tonight 6PM</section>
         <br/>
         <section style="text-align: center;">
           <?php if (isset($user)): ?>

@@ -143,7 +143,7 @@
                     } else {
                       $type = "series";
                     }
-                    if ($available = 1){
+                    if ($available == 1){
                       $avstat = "darkgreen";
                     } else {
                       $avstat = "red";

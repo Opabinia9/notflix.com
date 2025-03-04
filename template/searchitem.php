@@ -10,7 +10,7 @@ echo '
     <div class="catyear">'.$releaseyear.'</div>
     <div class="catlength">'.$length.'</div>
     <div class="cattype">'.$type.'</div>
-    <div class="catavailable" style="background-color:'.$avstat.'"></div>
+    <div class="catavailable" style="background-color:'.$avstat.'; Border-color: '.$avstat.'"></div>
   </div>
 </div>
 ';
