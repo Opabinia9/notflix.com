@@ -1,13 +1,13 @@
--- MySQL dump 10.13  Distrib 8.0.41, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.41, for Linux (x86_64)
 --
--- Host: localhost    Database: notflixdb
+-- Host: localhost    Database: NotflixDB
 -- ------------------------------------------------------
--- Server version	8.0.41
+-- Server version	8.0.41-0ubuntu0.24.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!50503 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -102,7 +102,7 @@ CREATE TABLE `episode` (
 
 LOCK TABLES `episode` WRITE;
 /*!40000 ALTER TABLE `episode` DISABLE KEYS */;
-INSERT INTO `episode` VALUES (1,1,1,'?','?',0,'http://notflix.com/'),(1,1,2,'?','?',0,'http://notflix.com/'),(1,1,3,'?','?',0,'http://notflix.com/'),(1,1,4,'?','?',0,'http://notflix.com/'),(1,1,5,'?','?',0,'http://notflix.com/'),(1,1,6,'?','?',0,'http://notflix.com/'),(1,1,7,'?','?',0,'http://notflix.com/'),(1,1,8,'I Wanna Be Bobby\'s Girl','21m',0,'http://notflix.com/'),(1,1,9,'Watching the Detectives','22m',0,'http://notflix.com/'),(1,1,10,'Look What They\'ve Done To My Song','22m',1,'http://notflix.com/'),(1,1,11,'Whiter Shade Of Pale','22m',1,'http://notflix.com/'),(1,1,12,'Emotional Rescue','21m',1,'http://notflix.com/'),(1,1,13,'The Green, Green Grass Of Home','21m',1,'http://notflix.com/'),(1,1,14,'The Lion Sleeps Tonight','21m',1,'http://notflix.com/'),(1,1,15,'When A Man Loves A Woman','21m',1,'http://notflix.com/'),(1,1,16,'Beast Of Burden','21m',1,'http://notflix.com/videos/san114/Series/BTVS/S2E16.mp4'),(2,2,1,'When She Was Bad','45m',0,'http://notflix.com'),(2,2,2,'Some Assembly Required','44m',0,'http://notflix.com'),(2,2,3,'School Hard','44m',0,'http://notflix.com'),(2,2,4,'Inca Mummy Girl','44m',0,'http://notflix.com'),(2,2,5,'Reptile Boy','44m',0,'http://notflix.com'),(2,2,6,'Halloween','44m',0,'http://notflix.com'),(2,2,7,'Lie to Me','45m',0,'http://notflix.com'),(2,2,8,'The Dark Age','45m',0,'http://notflix.com'),(2,2,9,'What\'s My Line?: Part 1','1h',0,'http://notflix.com'),(2,2,11,'Ted','45m',0,'http://notflix.com'),(2,2,12,'Bad Eggs','1h',0,'http://notflix.com'),(2,2,13,'Surprise','1h',0,'http://notflix.com'),(2,2,14,'Innocence','1h',0,'http://notflix.com'),(2,2,15,'Phases','1h',0,'http://notflix.com'),(2,2,16,'Bewitched, Bothered and Bewildered','1h',0,'http://notflix.com/videos/san114/Series/BTVS/S2E16.mp4'),(2,2,17,'Passion','1h',0,'http://notflix.com/videos/san114/Series/BTVS/S1E17.mp4/'),(2,2,18,'Killed by Death','1h',0,'http://notflix.com/videos/san114/Series/BTVS/S1E18.mp4/'),(2,2,19,'I Only Have Eyes for You','1h',0,'http://notflix.com/videos/san114/Series/BTVS/S1E19.mp4/'),(2,2,20,'Go Fish','1h',0,'http://notflix.com/videos/san114/Series/BTVS/S1E20.mp4/'),(2,2,21,'Becoming: Part 1','1h',0,'http://notflix.com/videos/san114/Series/BTVS/S1E21.mp4/'),(2,2,22,'Becoming: Part 2','44m',0,'http://notflix.com/videos/san114/Series/BTVS/S1E22.mp4/');
+INSERT INTO `episode` VALUES (1,1,1,'?','?',0,'http://notflix.com'),(1,1,2,'?','?',0,'http://notflix.com'),(1,1,3,'?','?',0,'http://notflix.com'),(1,1,4,'?','?',0,'http://notflix.com'),(1,1,5,'?','?',0,'http://notflix.com'),(1,1,6,'?','?',0,'http://notflix.com'),(1,1,7,'?','?',0,'http://notflix.com'),(1,1,8,'I Wanna Be Bobby\'s Girl','21m',0,'http://notflix.com'),(1,1,9,'Watching the Detectives','22m',0,'http://notflix.com'),(1,1,10,'Look What They\'ve Done To My Song','22m',1,'http://notflix.com'),(1,1,11,'Whiter Shade Of Pale','22m',1,'http://notflix.com'),(1,1,12,'Emotional Rescue','21m',1,'http://notflix.com'),(1,1,13,'The Green, Green Grass Of Home','21m',1,'http://notflix.com'),(1,1,14,'The Lion Sleeps Tonight','21m',1,'http://notflix.com'),(1,1,15,'When A Man Loves A Woman','21m',1,'http://notflix.com'),(1,1,16,'Beast Of Burden','21m',1,'http://notflix.com'),(2,2,1,'When She Was Bad','45m',0,'http://notflix.com'),(2,2,2,'Some Assembly Required','44m',0,'http://notflix.com'),(2,2,3,'School Hard','44m',0,'http://notflix.com'),(2,2,4,'Inca Mummy Girl','44m',0,'http://notflix.com'),(2,2,5,'Reptile Boy','44m',0,'http://notflix.com'),(2,2,6,'Halloween','44m',0,'http://notflix.com'),(2,2,7,'Lie to Me','45m',0,'http://notflix.com'),(2,2,8,'The Dark Age','45m',0,'http://notflix.com'),(2,2,9,'What\'s My Line?: Part 1','1h',0,'http://notflix.com'),(2,2,11,'Ted','45m',0,'http://notflix.com'),(2,2,12,'Bad Eggs','1h',0,'http://notflix.com'),(2,2,13,'Surprise','1h',0,'http://notflix.com'),(2,2,14,'Innocence','1h',0,'http://notflix.com'),(2,2,15,'Phases','1h',0,'http://notflix.com'),(2,2,16,'Bewitched, Bothered and Bewildered','1h',0,'http://notflix.com/videos/san114/Series/BTVS/2-16.mp4'),(2,2,17,'Passion','1h',1,'http://notflix.com/videos/san114/Series/BTVS/2-17.mp4'),(2,2,18,'Killed by Death','1h',1,'http://notflix.com/videos/san114/Series/BTVS/2-18.mp4'),(2,2,19,'I Only Have Eyes for You','1h',1,'http://notflix.com/videos/san114/Series/BTVS/2-19.mp4'),(2,2,20,'Go Fish','1h',1,'http://notflix.com/videos/san114/Series/BTVS/2-20.mp4'),(2,2,21,'Becoming: Part 1','1h',1,'http://notflix.com/videos/san114/Series/BTVS/2-21.mp4'),(2,2,22,'Becoming: Part 2','44m',1,'http://notflix.com/videos/san114/Series/BTVS/2-22.mp4');
 /*!40000 ALTER TABLE `episode` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -291,4 +291,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-03-05 17:42:02
+-- Dump completed on 2025-03-05 19:47:38
