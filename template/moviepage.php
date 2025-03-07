@@ -39,7 +39,7 @@
           $available = $row["Available"];
           $URL = $row["URL"];
         }
-    } else {echo "0 results";}
+    } else {}
 
     $conn->close();
   ?>
