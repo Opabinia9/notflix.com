@@ -1,13 +1,13 @@
--- MySQL dump 10.13  Distrib 8.0.41, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.41, for Linux (x86_64)
 --
--- Host: localhost    Database: notflixdb
+-- Host: localhost    Database: NotflixDB
 -- ------------------------------------------------------
--- Server version	8.0.41
+-- Server version	8.0.41-0ubuntu0.24.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!50503 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -244,7 +244,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (23,'Ali-cat','$2y$10$HyI/A0nQKlxwNWFSGM7ktOVNci4cZ2XYGBs6q1nnfnhMpy.iqvxcm','2025-03-04',_binary '¢ºW©æÖ}\√\–uû\Õ'),(24,'PoigusJoigus','$2y$10$qMEocr3bCloP3SNqQbZnC.7Y1tRHzcXRrwzWID.l6kOxMGd6C0XjK','2025-03-04',_binary '\\î\‰¶¸MN\Á£%%x\\o'),(25,'Orik','$2y$10$I6sg8y6zT9kPvv2r..OKiu.ElI.GHcMRQTEY3FK2x5N8xTgDuUcIC','2025-03-04',_binary '_+*s3Bz/£H¨¥¯\‡'),(26,'seb','$2y$10$wAV5W1tH6jGMwevuYOjjPOvCtirMJreHuCzUSLEpWZ9fENg75gaSK','2025-03-06',_binary '\ÿÙÿà\'Û3\‡,ù\nj7');
+INSERT INTO `users` VALUES (23,'Ali-cat','$2y$10$HyI/A0nQKlxwNWFSGM7ktOVNci4cZ2XYGBs6q1nnfnhMpy.iqvxcm','2025-03-04',_binary '¢ºW©æÖ}\√\–uû\Õ'),(24,'PoigusJoigus','$2y$10$qMEocr3bCloP3SNqQbZnC.7Y1tRHzcXRrwzWID.l6kOxMGd6C0XjK','2025-03-04',_binary '\\î\‰¶¸MN\Á£%%x\\o'),(25,'Orik','$2y$10$I6sg8y6zT9kPvv2r..OKiu.ElI.GHcMRQTEY3FK2x5N8xTgDuUcIC','2025-03-04',_binary '_+*s3Bz/£H¨¥¯\‡'),(26,'seb','$2y$10$wAV5W1tH6jGMwevuYOjjPOvCtirMJreHuCzUSLEpWZ9fENg75gaSK','2025-03-06',_binary '\ÿ\Ù\ÿà\'\Û3\‡,ù\nj7');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -278,7 +278,7 @@ CREATE TABLE `watchlist` (
 
 LOCK TABLES `watchlist` WRITE;
 /*!40000 ALTER TABLE `watchlist` DISABLE KEYS */;
-INSERT INTO `watchlist` VALUES (25,1,1,10,'00:00:00'),(25,2,2,17,'00:00:00'),(25,5,2,10,'00:00:00'),(25,7,5,12,'00:00:00'),(25,8,3,15,'00:00:00'),(26,3,4,6,'00:48:27'),(26,4,0,1,'01:35:28');
+INSERT INTO `watchlist` VALUES (25,1,1,10,'00:00:00'),(25,2,2,17,'00:00:00'),(25,5,2,10,'00:00:00'),(25,7,5,12,'00:00:00'),(25,8,3,15,'00:00:00'),(26,3,4,6,'00:48:27'),(26,4,0,1,'01:35:28'),(26,9,1,5,'00:15:40');
 /*!40000 ALTER TABLE `watchlist` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -291,4 +291,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-03-09 14:43:30
+-- Dump completed on 2025-03-09 15:19:52
