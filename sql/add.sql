@@ -1,3 +1,10 @@
-insert into Episode(SeriesID,SeasonID,EpisodeID,EpisodeTitle,Length,Available) values(
-1,1,1,"?","?",1
-);
+insert into season values(9,2,25);
+insert into season values(9,3,24);
+insert into season values(9,4,24);
+insert into season values(9,5,20);
+insert into season values(9,6,22);
+insert into season values(9,7,22);
+insert into season values(9,8,21);
+insert into season values(9,9,20);
+insert into season values(9,10,6);
+insert into season values(9,11,10);
