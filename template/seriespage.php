@@ -209,7 +209,7 @@ if(isset($_SESSION["user_id"])){
       if($EpisodeID == $selectedep){echo "checked";};
       echo '
         required onchange="this.form.submit()">
-        <div class="eplable"';  if(!$avai){echo 'style="background-color: darkgreen;"';}; echo '>Ep '.$EpisodeID.': '.$eptitle.'</div>
+        <div class="eplable"';  if($avai == 0){echo 'style="background-color: darkgreen;"';}; echo '>Ep '.$EpisodeID.': '.$eptitle.'</div>
         </label>
       ';
       }
