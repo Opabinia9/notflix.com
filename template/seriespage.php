@@ -202,13 +202,14 @@ if(isset($_SESSION["user_id"])){
       while($row = $result->fetch_assoc()) {
       $eptitle = $row["EpisodeTitle"];
       $EpisodeID = $row["EpisodeID"];
+      $avai = $row["Available"];
       echo '
       <label class="episode">
       <input type="radio" name="selectedepisode" value="'.$EpisodeID.'"';
       if($EpisodeID == $selectedep){echo "checked";};
       echo '
         required onchange="this.form.submit()">
-        <div class="eplable">Ep '.$EpisodeID.': '.$eptitle.'</div>
+        <div class="eplable"';  if(!$avai){echo 'style="background-color: darkgreen;"';}; echo '>Ep '.$EpisodeID.': '.$eptitle.'</div>
         </label>
       ';
       }
